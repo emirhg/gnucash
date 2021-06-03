@@ -457,6 +457,7 @@ gnucash/report/reports/example/sample-graphs.scm
 gnucash/report/reports/example/sample-report.scm
 gnucash/report/reports/locale-specific/de_DE/taxtxf.scm
 gnucash/report/reports/locale-specific/en_US/taxtxf.scm
+gnucash/report/reports/locale-specific/es_MX/taxtxf.scm
 gnucash/report/reports/reports.scm
 gnucash/report/reports/standard/account-piecharts.scm
 gnucash/report/reports/standard/account-summary.scm
@@ -701,4 +702,7 @@ libgnucash/tax/de_DE/txf.scm
 libgnucash/tax/en_US/tax.scm
 libgnucash/tax/en_US/txf-help.scm
 libgnucash/tax/en_US/txf.scm
+libgnucash/tax/es_MX/tax.scm
+libgnucash/tax/es_MX/txf-help.scm
+libgnucash/tax/es_MX/txf.scm
 libgnucash/tax/gnc-locale-tax.c
