@@ -3334,7 +3334,7 @@
  'report-guid "ed4c602ec69d4c6d85eff319e20d33f7"
  'menu-name (N_ "Declaración del ejercio fśical")
  ;;'menu-path (list gnc:menuname-taxes)
- 'menu-tip (N_ "Declración de ingresos y egresos")
+ 'menu-tip (N_ "Declaración de ingresos y egresos")
  'options-generator tax-options-generator
  'renderer (lambda (report-obj)
              (generate-tax-schedule
