@@ -31,7 +31,7 @@
 (export txf-help-strings)
 (define txf-help-strings
   '(
-    (N258 . "Ingresos causados en territorio nacional por actividades con extranjeros")
-    (N258 . "Ingresos causados en territorio nacional por actividades normales con connacionales")
+    (N257 . "Actividades gravadas con una tasa del 0% sobre el valor de consumo")
+    (N258 . "Actividades gravadas con una tasa del 16% sobre el valor de consumo")
    )
 )

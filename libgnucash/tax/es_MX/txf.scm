@@ -1,6 +1,6 @@
 ;; -*-scheme-*-
-;;
-;;  Richard -Gilligan- Uschold
+;;  Author Emir Herrera González
+;;  Copy from txf.scm by Richard -Gilligan- Uschold
 ;; These are TXF codes and a brief description of each. See taxtxf.scm
 ;; and txf-export-help.scm
 ;;
@@ -18,7 +18,7 @@
 ;; Added asset and liability/equity tax code categories
 ;; Added version 041 txf data for Partnership, Corporation, S Corporation,
 ;;    tax entity types
-;; Added 'None' type for no income tax options
+;; Added 'Ninguno' type for no income tax options
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; This program is free software; you can redistribute it and/or
@@ -71,11 +71,8 @@
 
 (define txf-tax-entity-types
   (list
-   (cons 'F1040 #("ISR" "Impuesto sobre la renta"))
-   (cons 'F1065 #("IVA" "Impuesto al Valor Agregado"))
-   ;(cons 'F1120 #("Corporation" "Files US Form 1120 Tax Return"))
-   ;(cons 'F1120S #("S Corporation" "Files US Form 1120S Tax Return"))
-   ;(cons 'Other #("None" "No Income Tax Options Provided"))
+   (cons 'PFCAE #("PFCAE" "Persona física con actividad empresarial"))
+   (cons 'Other #("Ninguno" "Sin opciones provistas para el reporte de impuestos a los ingresos"))
  )
 )
 
@@ -130,7 +127,7 @@
 
 (define (gnc:txf-get-code-info categories code index tax-entity-type)
   (and-let* ((sym (if (string-null? tax-entity-type)
-                      'F1040
+                      'PFCAE
                       (string->symbol tax-entity-type)))
              (tax-entity-codes (assv-ref categories sym))
              (category (assv-ref tax-entity-codes code)))
@@ -144,24 +141,34 @@
 
 (define txf-income-categories
  (list
-  (cons 'F1040
+  (cons 'PFCAE
    (list
-    (cons 'N000 #(none "" "Tax Report Only - No TXF Export" 0 #f ""))
+    (cons 'N000 #(none "" "Sólo reporte de impuestos - No exportar TXF" 0 #f ""))
 
-    (cons 'N256 #(none "F1040" "Ingresos del periodo" 1 #f "" ))
+    ;(cons 'N256 #(parent "ISR" "Ingresos del periodo" 1 #f "" ))
 
+    (cons 'N200 #(current "Ingresos" "Ingresos totales propios de la actividad nacionales" 1 #f "No sé que es esto" ((2010 "Actividades gravadas a la tasa del 16%")) ))
+    (cons 'N201 #(current "Ingresos" "Ingresos totales propios de la actividad extranjeros" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))
+    (cons 'N202 #(current "Ingresos" "Ingresos exclusivos por autotransporte de carga federal" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))
+    (cons 'N203 #(current "Ingresos" "Anticipo de clientes" 1 #f "No sé que es esto" ((2010 "Actividades gravadas a la tasa del 16%")) ))
+    (cons 'N204 #(current "Ingresos" "Ganancia en la enajenación de acciones o por reembolsos de cápital" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))
+    (cons 'N205 #(current "Ingresos" "Ganancia en la enajenación de terrenos o activos fijos" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))
+    (cons 'N206 #(current "Ingresos" "Íntereses cobrados sin ajuste alguno y ganancia cambiaria relacionados con actividades propias" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))
+    (cons 'N207 #(current "Ingresos" "Servicios de transporte terrestres de pasajeros y transporte de bienes" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))
+    (cons 'N208 #(current "Ingresos" "Servicios de hospedaje" 1 #f "" ((2010 "Actividades gravadas a la tasa del 16%")) ))
+    (cons 'N209 #(current "Ingresos" "Enajenación de bienes y prestación de servicios" 1 #f "" ((2010 "Actividades gravadas a la tasa del 16%")) ))
+    (cons 'N210 #(current "Ingresos" "Servicios profesionales (Honorarios)" 1 #f "" ((2010 "Actividades gravadas a la tasa del 16%")) ))
+
+    (cons 'N400 #(current "Ingresos" "Actividades excentas" 1 #f "" ((2010 "Actividades excentas"))))
+
+    (cons 'N900 #(none "NO-LIVA" "Bonos, descuentos y reembolsos" 1 #f "" ((2010 "Actividades no consideradas la Ley del IVA")) ))
+    (cons 'N901 #(none "NO-LIVA" "Regalos y donativos" 1 #f "" ((2010 "Actividades no consideradas la Ley del IVA")) ))
+    (cons 'N910 #(none "NO-LIVA" "Otras actividades excentas" 1 #f "" ((2010 "Actividades no consideradas la Ley del IVA"))))
    )
   )
   (cons 'F1065
    (list
-    (cons 'N000 #(none "" "Tax Report Only - No TXF Export" 0 #f ""))
-
-    ;(cons 'N256 #(not-impl "F1065" "Ingresos del periodo" 1 #f "" ((2020 "Ingresos del periodo")))
-
-    (cons 'N1618 #(none "F1065" "Actividades gravadas a la tasa del 16%" 1 #f "" ((2020 "Ingresos del periodo")) ))
-    (cons 'N1619 #(none "F1065" "Actividades gravadas a la tasa del 0%" 1 #f "" ((2020 "Ingresos del periodo")) ))
-    (cons 'N1629 #(none "F1065" "Actividades excentas" 1 #f "" ((2020 "Ingresos del periodo"))))
-
+    (cons 'N000 #(parent "" "Sólo reporte de impuestos - No exportar TXF" 0 #f ""))
    )
   )
  )
@@ -169,18 +176,18 @@
 
 (define txf-expense-categories
  (list
-  (cons 'F1040
+  (cons 'PFCAE
    (list
-    (cons 'N000 #(none "" "Tax Report Only - No TXF Export" 0 #f ""))
+    (cons 'N000 #(none "" "Sólo reporte de impuestos - No exportar TXF" 0 #f ""))
+    (cons 'N680 #(parent "GASTOS" "Compras y gastos del periodo" 1 #f "" ((2020 "Gastos del período") )))
 
-    (cons 'N256 #(not-impl "F1040" "Form 1040" 1 #f ""))
-    (cons 'N680 #(none "F1040" "Compras y gastos del periodo" 1 #f "" ((2019 "Schedule 1, 10") (2018 "Schedule 1, 23") (2007 "23") (2006 "NA - Expired") (2002 "23"))))
-    (cons 'N681 #(none "F1040" "Participación de los trabajadores en las utilidades" 1 #f "" ((2019 "Schedule 1, 10") (2018 "Schedule 1, 23") (2007 "23") (2006 "NA - Expired") (2002 "23"))))
+    ;(cons 'N256 #(not-impl "PFCAE" "Form 1040" 1 #f ""))
+    ;(cons 'N681 #(none "PFCAE" "Participación de los trabajadores en las utilidades" 1 #f "" ((2019 "Schedule 1, 10") (2018 "Schedule 1, 23") (2007 "23") (2006 "NA - Expired") (2002 "23"))))
    )
   )
   (cons 'F1065
    (list
-    (cons 'N000 #(none "" "Tax Report Only - No TXF Export" 0 #f ""))
+    (cons 'N000 #(none "" "Sólo reporte de impuestos - No exportar TXF" 0 #f ""))
 
     (cons 'N1256 #(not-impl "F1065" "Form F1065" 1 #f ""))
     (cons 'N680 #(none "F1065" "Compras y gastos del periodo" 1 #f "" ))
@@ -193,21 +200,19 @@
 
 (define txf-asset-categories
  (list
-  (cons 'F1040
+  (cons 'PFCAE
    (list
-    (cons 'N000 #(none "" "Tax Report Only - No TXF Export" 0 #f ""))
-
-    (cons 'N437 #(not-impl "F8606" "Form 8606" 1 #t ""))
-    (cons 'N440 #(none "F8606" "IRA basis at beg of year" 1 #t "" ((1993 "2") (1988 "3"))))
-    (cons 'N438 #(none "F8606" "IRAs value at end of year" 1 #t "" ((1993 "6") (1989 "1") (1988 "11") (1987 "8"))))
-
-    (cons 'N392 #(not-impl "HomeWks" "Home Sale Worksheets" 1 #t ""))
-    (cons 'N397 #(none "HomeWks" "Cost of new home" 1 #t "" ((2000 "11b")) 2000))
+    (cons 'N000 #(none "" "Sólo reporte de impuestos - No exportar TXF" 0 #f ""))
+    ;(cons 'N440 #(none "F8606" "IRA basis at beg of year" 1 #t "" ((1993 "2") (1988 "3"))))
+    ;(cons 'N438 #(none "F8606" "IRAs value at end of year" 1 #t "" ((1993 "6") (1989 "1") (1988 "11") (1987 "8"))))
+    (cons 'N400 #(current "ISR" "ISR Retenido" 0 #f ""))
+    (cons 'N401 #(current "IVA" "IVA Acreditable del periodo" 0 #f "" ((2020 "IVA a favor"))))
+    (cons 'N402 #(current "IVA" "IVA Retenido" 0 #f ""))
    )
   )
   (cons 'F1065
    (list
-    (cons 'N000 #(none "" "Tax Report Only - No TXF Export" 0 #f ""))
+    (cons 'N000 #(none "" "Sólo reporte de impuestos - No exportar TXF" 0 #f ""))
 
     (cons 'N1864 #(none "F1065" "Cash" 1 #f "" ((1990 "L1"))))
     (cons 'N1865 #(none "F1065" "Accts. Rec. and trade notes" 1 #f "" ((1990 "L2a"))))
@@ -229,7 +234,7 @@
   )
   (cons 'F1120
    (list
-    (cons 'N000 #(none "" "Tax Report Only - No TXF Export" 0 #f ""))
+    (cons 'N000 #(none "" "Sólo reporte de impuestos - No exportar TXF" 0 #f ""))
 
     (cons 'N1172 #(none "F1120" "Cash" 1 #f "" ((1990 "L1"))))
     (cons 'N1174 #(none "F1120" "Accts. Rec. and trade notes." 1 #f "" ((1990 "L2a"))))
@@ -252,7 +257,7 @@
   )
   (cons 'F1120S
    (list
-    (cons 'N000 #(none "" "Tax Report Only - No TXF Export" 0 #f ""))
+    (cons 'N000 #(none "" "Sólo reporte de impuestos - No exportar TXF" 0 #f ""))
 
     (cons 'N1535 #(none "F1120S" "Cash" 1 #f "" ((1990 "L1"))))
     (cons 'N1537 #(none "F1120S" "Accts. Rec. and trade notes" 1 #f "" ((1990 "L2a"))))
@@ -275,7 +280,7 @@
   )
   (cons 'Other
    (list
-    (cons 'N000 #(none "" "Tax Report Only - No TXF Export" 0 #f ""))
+    (cons 'N000 #(none "" "Sólo reporte de impuestos - No exportar TXF" 0 #f ""))
    )
   )
  )
@@ -283,14 +288,14 @@
 
 (define txf-liab-eq-categories
  (list
-  (cons 'F1040
+  (cons 'PFCAE
    (list
-    (cons 'N000 #(none "" "Tax Report Only - No TXF Export" 0 #f ""))
+    (cons 'N000 #(none "" "Sólo reporte de impuestos - No exportar TXF" 0 #f ""))
    )
   )
   (cons 'F1065
    (list
-    (cons 'N000 #(none "" "Tax Report Only - No TXF Export" 0 #f ""))
+    (cons 'N000 #(none "" "Sólo reporte de impuestos - No exportar TXF" 0 #f ""))
 
     (cons 'N1884 #(none "F1065" "Accounts payable" 1 #f "" ((1990 "L15"))))
     (cons 'N1886 #(none "F1065" "S-T Mortgage/note/bonds pay." 1 #f "" ((1990 "L16"))))
@@ -302,7 +307,7 @@
   )
   (cons 'F1120
    (list
-    (cons 'N000 #(none "" "Tax Report Only - No TXF Export" 0 #f ""))
+    (cons 'N000 #(none "" "Sólo reporte de impuestos - No exportar TXF" 0 #f ""))
 
     (cons 'N1209 #(none "F1120" "Accounts payable" 1 #f "" ((1990 "L16"))))
     (cons 'N1211 #(none "F1120" "S-T Mortgage/note/bonds pay." 1 #f "" ((1990 "L17"))))
@@ -318,7 +323,7 @@
   )
   (cons 'F1120S
    (list
-    (cons 'N000 #(none "" "Tax Report Only - No TXF Export" 0 #f ""))
+    (cons 'N000 #(none "" "Sólo reporte de impuestos - No exportar TXF" 0 #f ""))
 
     (cons 'N1573 #(none "F1120S" "Accounts payable" 1 #f "" ((1990 "L16"))))
     (cons 'N1575 #(none "F1120S" "S-T Mortgage/note/bonds pay." 1 #f "" ((1990 "L17"))))
@@ -333,7 +338,7 @@
   )
   (cons 'Other
    (list
-    (cons 'N000 #(none "" "Tax Report Only - No TXF Export" 0 #f ""))
+    (cons 'N000 #(none "" "Sólo reporte de impuestos - No exportar TXF" 0 #f ""))
    )
   )
  )

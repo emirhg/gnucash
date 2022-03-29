@@ -1,7 +1,6 @@
 ;; -*-scheme-*-
 ;; Tax report, country specific
-;; US version by Richard -Gilligan- Uschold,
-;; updated by J. Alex Aycinena, July 2008, October 2009
+;; MX version by Emir Herrera González copied from US version by Richard -Gilligan- Uschold
 ;;
 ;; This report prints transaction details and account totals for accounts
 ;; relevant to whatever tax scheme is defined and activated by locale settings,
@@ -401,7 +400,7 @@
        (if (or tax_code? transaction-details?)
            (gnc:html-text-append! description (gnc:html-markup-b
               (string-append "&nbsp; &nbsp; &nbsp; &nbsp;"
-                             (if end-bal-text end-bal-text "Total For "))))
+                             (if end-bal-text end-bal-text "Total para   "))))
            (if (not tax_code?)
                (gnc:html-text-append! description (gnc:html-markup-b
                   "&nbsp; &nbsp; &nbsp; &nbsp;"))
@@ -1745,36 +1744,36 @@
                             (set! selected-accounts-sorted-by-form-line-acct
                                     (append (list form-line-acct)
                                     selected-accounts-sorted-by-form-line-acct))
-                            (if (or (string=? tax-code "N438")
-                                    (string=? tax-code "N440"))
-                                (let* ((tax-code2 (if (string=? tax-code
-                                                               "N438")
-                                                      "N440" "N438"))
-                                       (tax-code2-sym (string->symbol
-                                                                     tax-code2))
-                                       (line2 (get-acct-txf-info 'line
-                                                            type tax-code2-sym))
-                                       (line2 (if line2
-                                                  (get-line-info tax-year line2)
-                                                  ""))
-                                       (line2 (if line2
-                                                  line2
-                                                  ""))
-                                      )
-                                      (set!
-                                      selected-accounts-sorted-by-form-line-acct
-                                         (append (list
-                                                   (list (list form)
-                                                         (list copy)
-                                                         (list line2)
-                                                         (list tax-code2)
-                                                         (list account-name)
-                                                         (list account)
-                                                         (list type)
-                                                         (list tax-code2-sym)))
-                                    selected-accounts-sorted-by-form-line-acct))
-                                )
-                            );; end if
+;                            (if (or (string=? tax-code "N438")
+;                                    (string=? tax-code "N440"))
+;                                (let* ((tax-code2 (if (string=? tax-code
+;                                                               "N438")
+;                                                      "N440" "N438"))
+;                                       (tax-code2-sym (string->symbol
+;                                                                     tax-code2))
+;                                       (line2 (get-acct-txf-info 'line
+;                                                            type tax-code2-sym))
+;                                       (line2 (if line2
+;                                                  (get-line-info tax-year line2)
+;                                                  ""))
+;                                       (line2 (if line2
+;                                                  line2
+;                                                  ""))
+;                                      )
+;                                      (set!
+;                                      selected-accounts-sorted-by-form-line-acct
+;                                         (append (list
+;                                                   (list (list form)
+;                                                         (list copy)
+;                                                         (list line2)
+;                                                         (list tax-code2)
+;                                                         (list account-name)
+;                                                         (list account)
+;                                                         (list type)
+;                                                         (list tax-code2-sym)))
+;                                    selected-accounts-sorted-by-form-line-acct))
+;                                )
+;                            );; end if
                       );; end let*
                       (begin
                         (set! txf-invalid-alist (assoc-set!
@@ -2746,7 +2745,7 @@
                                     (string-append
                                       (if (string=? current-form-sched-line "")
                                           ""
-                                          (string-append "Line "
+                                          (string-append "Captura "
                                                   current-form-sched-line ": "))
                                       description " ("
                                       (substring current-tax-code 1
@@ -2756,7 +2755,7 @@
                                     (string-append
                                       (if (string=? current-form-sched-line "")
                                           ""
-                                          (string-append "Line "
+                                          (string-append "Captura "
                                                   current-form-sched-line ": "))
                                       description " ("
                                       (substring current-tax-code 1
@@ -3332,24 +3331,24 @@
  'version 1
  'name reportname
  'report-guid "ed4c602ec69d4c6d85eff319e20d33f7"
- 'menu-name (N_ "Declaración del ejercio fśical")
+ 'menu-name (N_ "Declaración del ejercio físcal")
  ;;'menu-path (list gnc:menuname-taxes)
  'menu-tip (N_ "Declaración de ingresos y egresos")
  'options-generator tax-options-generator
  'renderer (lambda (report-obj)
              (generate-tax-schedule
-              (G_ "Taxable Income/Deductible Expenses")
-              (G_ "This report shows transaction detail for your accounts \
-related to Income Taxes.")
+              (G_ "Ingresos impositivos/Gastos deducibles")
+              (G_ "Este reporte muestra el detalle de las transacciones para las cuentas \
+relacionadas con impuestos")
               report-obj
               #t
               #f))
  'export-types (list (cons "TXF" 'txf))
  'export-thunk (lambda (report-obj choice file-name)
                  (generate-tax-schedule
-                  (G_ "Taxable Income/Deductible Expenses")
-                  (G_ "This page shows transaction detail for relevant \
-Income Tax accounts.")
+                  (G_ "Ingreso impositivo/Gastos deducibles")
+                  (G_ "Esta página muestra el detalle de transacciones para cuentas de \
+                  Ingresos impositivos relevantes.")
                   report-obj
                   #f
                   file-name)))
