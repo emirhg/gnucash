@@ -42,21 +42,23 @@
 void
 gnc_locale_tax_init(void)
 {
+  char module_to_load[] = "gnucash locale en_US tax";
     /* This is a very simple hack that loads the (new, special) German
        tax definition file in a German locale, or (default) loads the
        US tax file. */
 # ifdef G_OS_WIN32
     gchar *thislocale = g_win32_getlocale();
-    gboolean is_de_DE = (strncmp(thislocale, "de_DE", 5) == 0);
-    g_free(thislocale);
+    // g_free(thislocale);
 # else /* !G_OS_WIN32 */
+    // REVIEW: gnucash/report/reports/reports.scm uses gnc-locale-name which depends on ${LC_ALL}
     const char *thislocale = setlocale(LC_ALL, NULL);
-    gboolean is_de_DE = (strncmp(thislocale, "de_DE", 5) == 0);
+    // LC_ALL returns all locales when LC_ALL is not set. The length of the string is check to verify if it was set or not
+    if (!*thislocale || strlen(thislocale) > 11 ){
+      thislocale="en_US";
+    }
 # endif /* G_OS_WIN32 */
-    if (is_de_DE)
-        scm_c_use_module("gnucash locale de_DE tax");
-    else
-        scm_c_use_module("gnucash locale us tax");
+  memcpy(&module_to_load[15], &thislocale[0], 5);
+  scm_c_use_module(module_to_load);
 }
 
 /* Caller is responsible for g_free'ing returned memory */

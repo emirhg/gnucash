@@ -17,9 +17,9 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash locale us tax))
+(define-module (gnucash locale en_US tax))
 
 (use-modules (gnucash core-utils))
 
-(load-and-reexport (gnucash locale us tax txf)
-                   (gnucash locale us tax txf-help))
+(load-and-reexport (gnucash locale en_US tax txf)
+                   (gnucash locale en_US tax txf-help))

@@ -2,7 +2,7 @@
 ;;  reports.scm
 ;;  load the standard report definitions
 ;;
-;;  Copyright (c) 2001 Linux Developers Group, Inc. 
+;;  Copyright (c) 2001 Linux Developers Group, Inc.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; This program is free software; you can redistribute it and/or
@@ -44,12 +44,16 @@
 (export gnc:receivables-report-create)
 (export gnc:owner-report-create-with-enddate)
 
-(let ((loc-spec (if (string-prefix? "de_DE" (gnc-locale-name)) 'de_DE 'us)))
+
+;; gnc-locale-name depends on ${LC_ALL}. Unknow function tu use LC_MONETARY (propably the most coherent setting).
+
+(let
+  ((loc-spec (if ( < (string-length (gnc-locale-name)) 12 ) (substring (gnc-locale-name) 0 5) "en_US" )))
   (report-module-loader
    (list
     '(gnucash reports standard) ; prefix for standard reports included in gnucash
     '(gnucash reports example)  ; rexample for example reports included in gnucash
-    `(gnucash reports locale-specific ,loc-spec))))
+    `(gnucash reports locale-specific ,(string->symbol loc-spec)))))
 
 (define (gnc:register-report-create account split query journal? ledger-type?
                                     double? title debit-string credit-string)

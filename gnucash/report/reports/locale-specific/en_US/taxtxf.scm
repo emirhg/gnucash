@@ -104,12 +104,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(define-module (gnucash reports locale-specific us taxtxf))
+(define-module (gnucash reports locale-specific en_US taxtxf))
 (use-modules (gnucash engine))
 (use-modules (gnucash utilities))
 (use-modules (gnucash core-utils)) ; for gnc:version and (G_ ...)
 (use-modules (gnucash app-utils))
-(use-modules (gnucash locale us tax))
+(use-modules (gnucash locale en_US tax))
 (use-modules (gnucash gnome-utils))
 (use-modules (gnucash report))
 (use-modules (srfi srfi-1))

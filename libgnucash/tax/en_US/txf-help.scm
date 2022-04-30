@@ -26,7 +26,7 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash locale us tax txf-help))
+(define-module (gnucash locale en_US tax txf-help))
 
 (export txf-help-strings)
 (define txf-help-strings

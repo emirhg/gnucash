@@ -1,5 +1,5 @@
 ;; -*-scheme-*-
-;; 
+;;
 ;;  Richard -Gilligan- Uschold
 ;; These are TXF codes and a brief description of each. See taxtxf.scm
 ;; and txf-export-help.scm
@@ -39,13 +39,13 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash locale us tax txf))
+(define-module (gnucash locale en_US tax txf))
 
 (use-modules (gnucash engine))
 (use-modules (gnucash core-utils))
 (use-modules (gnucash app-utils))
 (use-modules (srfi srfi-2))
-(use-modules (gnucash locale us tax txf-help))
+(use-modules (gnucash locale en_US tax txf-help))
 
 (export gnc:tax-type-txf-get-code-info)
 (export gnc:txf-get-category-key)
