@@ -1,6 +1,7 @@
 ;; -*-scheme-*-
 ;;  Author Emir Herrera González
-;;  Copy from txf.scm by Richard -Gilligan- Uschold
+;;  Heavily based on Richard -Gilligan- Uschold's work txf.scm
+;;
 ;; These are TXF codes and a brief description of each. See taxtxf.scm
 ;; and txf-export-help.scm
 ;;
@@ -19,6 +20,8 @@
 ;; Added version 041 txf data for Partnership, Corporation, S Corporation,
 ;;    tax entity types
 ;; Added 'Ninguno' type for no income tax options
+;;
+;; Bifurcado Ene 2023 para tropicalizar el código a la región mexicana
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; This program is free software; you can redistribute it and/or
@@ -153,7 +156,7 @@
     (cons 'N203 #(current "Ingresos" "Anticipo de clientes" 1 #f "No sé que es esto" ((2010 "Actividades gravadas a la tasa del 16%")) ))
     (cons 'N204 #(current "Ingresos" "Ganancia en la enajenación de acciones o por reembolsos de cápital" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))
     (cons 'N205 #(current "Ingresos" "Ganancia en la enajenación de terrenos o activos fijos" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))
-    (cons 'N206 #(current "Ingresos" "Íntereses cobrados sin ajuste alguno y ganancia cambiaria relacionados con actividades propias" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))
+    (cons 'N206 #(current "Ingresos" "Íntereses cobrados sin ajuste alguno y ganancia cambiaria relacionados con actividades propias" 1 #f "" ((2010 "Actividades gravadas a la tasa del 16%")) ))
     (cons 'N207 #(current "Ingresos" "Servicios de transporte terrestres de pasajeros y transporte de bienes" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))
     (cons 'N208 #(current "Ingresos" "Servicios de hospedaje" 1 #f "" ((2010 "Actividades gravadas a la tasa del 16%")) ))
     (cons 'N209 #(current "Ingresos" "Enajenación de bienes y prestación de servicios" 1 #f "" ((2010 "Actividades gravadas a la tasa del 16%")) ))
@@ -161,9 +164,9 @@
 
     (cons 'N400 #(current "Ingresos" "Actividades excentas" 1 #f "" ((2010 "Actividades excentas"))))
 
-    (cons 'N900 #(none "NO-LIVA" "Bonos, descuentos y reembolsos" 1 #f "" ((2010 "Actividades no consideradas la Ley del IVA")) ))
-    (cons 'N901 #(none "NO-LIVA" "Regalos y donativos" 1 #f "" ((2010 "Actividades no consideradas la Ley del IVA")) ))
-    (cons 'N910 #(none "NO-LIVA" "Otras actividades excentas" 1 #f "" ((2010 "Actividades no consideradas la Ley del IVA"))))
+    (cons 'N900 #(none "NO-LIVA" "Bonos, descuentos y reembolsos" 1 #f "" ((2010 "Otros Ingresos")) ))
+    (cons 'N901 #(none "NO-LIVA" "Regalos y donativos" 1 #f "" ((2010 "Otros Ingresos")) ))
+    (cons 'N910 #(none "NO-LIVA" "Otras actividades excentas" 1 #f "" ((2010 "Otros Ingresos"))))
    )
   )
   (cons 'F1065
@@ -179,7 +182,109 @@
   (cons 'PFCAE
    (list
     (cons 'N000 #(none "" "Sólo reporte de impuestos - No exportar TXF" 0 #f ""))
-    (cons 'N680 #(parent "GASTOS" "Compras y gastos del periodo" 1 #f "" ((2020 "Gastos del período") )))
+    ;(cons 'N680 #(parent "GASTOS" "Compras y gastos del periodo" 1 #f "" ((2020 "Compras y gastos del periodo") )))
+
+
+    ; * Gastos
+    (cons 'G230 #(parent "GASTOS" "Devoluciones, rebajas, descuentos y bonificaciones sobre ventas nacionales" 1 #f "" ((2020 "Compras y gastos del periodo") )))
+    (cons 'G231 #(parent "GASTOS" "Devoluciones, rebajas, descuentos y bonificaciones sobre ventas extranjeros" 1 #f "" ((2020 "Compras y gastos del periodo") )))
+    (cons 'G240 #(parent "GASTOS" "Adquicisiones netas de mercancías (compras) nacionales" 1 #f "" ((2020 "Compras y gastos del periodo") )))
+    (cons 'G241 #(parent "GASTOS" "Adquisiciones netas de mercancías (compras) extranjeros" 1 #f "" ((2020 "Compras y gastos del periodo") )))
+    (cons 'G250 #(parent "GASTOS" "Pérdidas por créditos incobrables" 1 #f "" ((2020 "Compras y gastos del periodo") )))
+
+    ; ** Aportaciones al SAR e Infonavit y júbilaciones por vejez
+    ; ** Cuotas al IMSS
+    ; ** Sueldos salarios y conceptos asimilados y prestaciones a trabajadores
+    ; ** Sueldos, salarios y prestaciones a trabajadores con discapacidad
+    ; ** Sueldos, salarios y pretaciones a trabajadores adultos mayores
+    ; ** Maniobras, empaques y fletes en el campo para la enajenacions de productos
+    ; alimenticios
+    ; ** Viáticos y gastos de viaje
+    (cons 'G300 #(parent "GASTOS" "Interés pagados sin ajute alguno e intereses moratorios" 1 #f "" ((2020 "Compras y gastos del periodo") )))
+
+    ; ** Honorarios
+    ; ** Regalias y asistencia técnica
+    ; ** Uso o goce temporal de bienes
+    ; ** Seguros y finanzas
+    ; ** Fletes y acarreo
+    ; ** Combustibles y lubricantes
+    ; ** Contribuciones pagadas, excepto IVA, ISR e IEPS
+    ; ** Impuesto local sobre los ingresos por actividades empresariales
+    ; ** Deducción de los pagos efectuados por el uso o goce temporal de
+    ; automóviles
+    ; ** Pagos efectuados por el uso o goce temporal de automóviles cuya propulsión
+    ; sea através de baterías eléctricas recargables y automóviles eléctricos con
+    ; combustión interna o accionados por hidrógeno
+    ; ** Monto deducible al 47% (pagos que son ingresos excentos para el
+    ; trabajador)
+    ; ** Monto deducible al 53% (pagos que son ingresos excentos para el
+    ; trabajador)
+    ; ** Consumo en restaurantes
+    (cons 'G350 #(parent "GASTOS" "Gasolina y mantenimiento de transporte" 1 #f "" ((2020 "Compras y gastos del periodo") )))
+    ; ** Deducción de mano de obra de trabajadores eventuales del campo, alimentación de ganado y gastos menores sin requisitos físcales
+    ; ** Deducción adicional por enajenación de libros, periódicos y revistas
+    ; ** Deducción de donativos realizados a organismos descentralizados del
+    ; Gobierno Federal
+    (cons 'N680 #(parent "GASTOS" "Gastos" 1 #f "" ((2020 "Compras y gastos del periodo") )))
+    ; ** Productos semiterminados o terminados
+    ; ** Materias primas
+    ; ** Transferencia de tecnología
+    ; ** Gastos de viaje destinados al goce o uso temporal de automóviles
+    ; ** Gastos de viaje destinados al hospedaje
+    ; ** Pérdidas por caso fortuito o fuerza mayor
+    ; ** Pérdidas derivadas de la enajenación
+    ;
+    ; * Estímulos
+    ; ** Gastos realizados como consecuencia de desastres naturales
+    ; ** Gastos realizados por adquisición de diesel marino especial
+    ; ** Gastos realizados por adquisición de otro tipo de diésel
+    ; ** Gasto realizados por uso de infraestructura carretera de cuota
+    ; ** Gastos realizados por investigación de desarrollo tecnológico
+    ; ** gastos realizados en la producción y distribución de cinematografía
+    ; nacional
+    ; ** gastos realizados en proyectos de inversión en las artes
+    ; ** Reparaciones y adaptaciones en inmuebles considerados históricos en el
+    ; centro histórico de la ciudad del contribuyente
+    ; ** Estímulo por contratación de adultos mayores  y/o con discapacidad
+    ;
+    ; * Deducción físcal de inversiones
+    ; ** Construcciones
+    ; ** Máquinaria y equipo
+    ; ** Mobiliario y equipo de oficina
+    ; ** Automóviles, autobuses, camiones de carga, tractocamiones, montacargas y
+    ; remolques
+    ; ** Equipos de transporte otros
+    ; ** Otras inversiones en activos fijos
+    ; ** Gastos, cargos diferidos y erogaciones en periodos preoperativos
+    ; ** Adaptación a instalaciones para personas con capacidades diferentes
+    ; ** Automóviles con propulsión de baterías eléctricas recargables y
+    ; automóviles eléctricos con combustión interna o accionados por hidrógeno
+    ; ** Bicicletas convencionales, bicicletas y motocicletas con propulsión de
+    ; baterias eléctricas recargables** Equipos fijos de alimentación para
+    ; vehículos eléctricos
+    ; ** Automóviles
+    ; ** Computadoras personales de escritorio y portátiles
+    ; ** Inversiones de ejercicios anteriores
+    ;
+    ; * Adquisiciones en el ejercicio
+    ; ** Construcciones
+    ; ** Máquinaria y equipo
+    ; ** Mobiliario y equipo de oficina
+    ; ** Automóviles, autobuses, camiones de carga, tractocamiones, montacargas y
+    ; remolques
+    ; ** Equipos de transporte otros
+    ; ** Otras inversiones en activos fijos
+    ; ** Gastos, cargos diferidos y erogaciones en periodos preoperativos
+    ; ** Adaptación a instalaciones para personas con capacidades diferentes
+    ; ** Automóviles con propulsión de baterías eléctricas recargables y
+    ; automóviles eléctricos con combustión interna o accionados por hidrógeno
+    ; ** Bicicletas convencionales, bicicletas y motocicletas con propulsión de
+    ; baterias eléctricas recargables
+    ; ** Equipos fijos de alimentación para vehículos eléctricos
+    ; ** Automóviles
+    ; ** Computadoras personales de escritorio y portátiles
+    ; ** Inversiones de ejercicios anteriores
+
 
     ;(cons 'N256 #(not-impl "PFCAE" "Form 1040" 1 #f ""))
     ;(cons 'N681 #(none "PFCAE" "Participación de los trabajadores en las utilidades" 1 #f "" ((2019 "Schedule 1, 10") (2018 "Schedule 1, 23") (2007 "23") (2006 "NA - Expired") (2002 "23"))))
@@ -291,6 +396,7 @@
   (cons 'PFCAE
    (list
     (cons 'N000 #(none "" "Sólo reporte de impuestos - No exportar TXF" 0 #f ""))
+    (cons 'L1000 #(parent "IVA" "IVA cobrado" 0 #f ""))
    )
   )
   (cons 'F1065
