@@ -43,8 +43,9 @@ set(gncmod_tax_de_DE_SCHEME_1 de_DE/txf-help.scm)
 set(gncmod_tax_de_DE_SCHEME_2 de_DE/txf.scm)
 set(gncmod_tax_de_DE_SCHEME_3 de_DE/tax.scm)
 
-set(gncmod_tax_es_MX_SCHEME_1 es_MX/txf.scm es_MX/txf-help.scm)
-set(gncmod_tax_es_MX_SCHEME_2 es_MX/tax.scm)
+set(gncmod_tax_es_MX_SCHEME_1 es_MX/txf-help.scm)
+set(gncmod_tax_es_MX_SCHEME_2 es_MX/txf.scm)
+set(gncmod_tax_es_MX_SCHEME_3 es_MX/tax.scm)
 
 set(GUILE_DEPENDS scm-app-utils)
 
@@ -83,7 +84,24 @@ gnc_add_scheme_targets(scm-tax-de_DE-3
     OUTPUT_DIR "gnucash/locale/de_DE"
     DEPENDS "scm-tax-de_DE-2;${GUILE_DEPENDS}")
 
-add_custom_target(scm-locale-tax ALL DEPENDS scm-tax-en_US-1 scm-tax-en_US-2 scm-tax-en_US-3 scm-tax-de_DE-1 scm-tax-de_DE-2  scm-tax-de_DE-3 scm-tax-es_MX-1 scm-tax-es_MX-2)
+gnc_add_scheme_targets(scm-tax-es_MX-1
+    SOURCES "${gncmod_tax_es_MX_SCHEME_1}"
+    OUTPUT_DIR "gnucash/locale/es_MX/tax"
+    DEPENDS "${GUILE_DEPENDS}"
+    MAKE_LINKS)
+
+gnc_add_scheme_targets(scm-tax-es_MX-2
+    SOURCES "${gncmod_tax_es_MX_SCHEME_2}"
+    OUTPUT_DIR "gnucash/locale/es_MX/tax"
+    DEPENDS "scm-tax-es_MX-1;${GUILE_DEPENDS}"
+    MAKE_LINKS)
+
+gnc_add_scheme_targets(scm-tax-es_MX-3
+    SOURCES "${gncmod_tax_es_MX_SCHEME_3}"
+    OUTPUT_DIR "gnucash/locale/es_MX"
+    DEPENDS "scm-tax-es_MX-2;${GUILE_DEPENDS}")
+
+add_custom_target(scm-locale-tax ALL DEPENDS scm-tax-en_US-1 scm-tax-en_US-2 scm-tax-en_US-3 scm-tax-de_DE-1 scm-tax-de_DE-2  scm-tax-de_DE-3 scm-tax-es_MX-1 scm-tax-es_MX-2 scm-tax-es_MX-3)
 
 set(de_DE_tax_EXTRA_DIST
     "de_DE/taxtxf - LIES MICH.txt"
@@ -92,6 +110,6 @@ set(de_DE_tax_EXTRA_DIST
 set_local_dist(tax_DIST_local CMakeLists.txt ${locale_tax_SOURCES}
     ${gncmod_tax_en_US_SCHEME_1} ${gncmod_tax_en_US_SCHEME_2} ${gncmod_tax_en_US_SCHEME_3}
     ${gncmod_tax_de_DE_SCHEME_1} ${gncmod_tax_de_DE_SCHEME_2} ${gncmod_tax_de_DE_SCHEME_3}
-    ${gncmod_tax_es_MX_SCHEME_1} ${gncmod_tax_es_MX_SCHEME_2}
+    ${gncmod_tax_es_MX_SCHEME_1} ${gncmod_tax_es_MX_SCHEME_2} ${gncmod_tax_es_MX_SCHEME_3}
     ${de_DE_tax_EXTRA_DIST})
 set(tax_DIST ${tax_DIST_local} ${locale_tax_DIST} ${test_locale_tax_DIST} PARENT_SCOPE)

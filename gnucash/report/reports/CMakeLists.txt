@@ -74,6 +74,10 @@ set(reports_de_DE_SCHEME
   locale-specific/de_DE/taxtxf.scm
 )
 
+set(reports_es_MX_SCHEME
+  locale-specific/es_MX/taxtxf.scm
+)
+
 set (reports_SCHEME
   reports.scm
 )
@@ -151,6 +155,12 @@ gnc_add_scheme_targets(scm-reports-de_DE
     DEPENDS "${scm_rpt_locale_specific_GUILE_DEPENDS}"
     MAKE_LINKS)
 
+gnc_add_scheme_targets(scm-reports-es_MX
+    SOURCES "${reports_es_MX_SCHEME}"
+    OUTPUT_DIR "gnucash/reports/locale-specific/es_MX"
+    DEPENDS "${scm_rpt_locale_specific_GUILE_DEPENDS}"
+    MAKE_LINKS)
+
 gnc_add_scheme_targets(scm-reports-standard-2
     SOURCES "${reports_standard_SCHEME_2}"
     OUTPUT_DIR "gnucash/reports/standard"
@@ -164,12 +174,13 @@ add_custom_target(scm-reports ALL DEPENDS
     scm-reports-common
     scm-rpt-reports
     scm-reports-en_US
-    scm-reports-de_DE)
+    scm-reports-de_DE
+    scm-reports-es_MX)
 
 
 set_local_dist(reports_DIST_local CMakeLists.txt ${reports_SCHEME}
     ${reports_common_SCHEME} ${reports_standard_SCHEME}  ${reports_standard_SCHEME_2}
-    ${reports_example_SCHEME} ${reports_en_US_SCHEME} ${reports_de_DE_SCHEME}
+    ${reports_example_SCHEME} ${reports_en_US_SCHEME} ${reports_de_DE_SCHEME} ${reports_es_MX_SCHEME}
     ${reports_standard_with_exposed_generator_SCHEME})
 set(reports_DIST ${reports_DIST_local} ${reports_support_DIST}
     ${test_reports_standard_DIST} PARENT_SCOPE)
