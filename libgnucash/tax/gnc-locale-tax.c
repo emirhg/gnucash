@@ -36,8 +36,6 @@
 #include <guile-mappings.h>
 #include <gnc-guile-utils.h>
 #include "gnc-locale-tax.h"
-#include <stdio.h>
-
 
 void
 gnc_locale_tax_init(void)
@@ -48,7 +46,6 @@ gnc_locale_tax_init(void)
   char module_to_load[] = "gnucash locale en_US tax";
 # ifdef G_OS_WIN32
     gchar *thislocale = g_win32_getlocale();
-  printf("Before starting");
     // g_free(thislocale);
 # else /* !G_OS_WIN32 */
     // REVIEW: gnucash/report/reports/reports.scm uses gnc-locale-name which depends on ${LC_ALL}
@@ -56,10 +53,8 @@ gnc_locale_tax_init(void)
     // LC_ALL returns all locales when LC_ALL is not set. The length of the string is check to verify if it was set or not
     if (!*thislocale || strlen(thislocale) > 11 ){
       thislocale="en_US";
-      printf("Invalid local %s", thislocale);
     }
 # endif /* G_OS_WIN32 */
-  printf("Doing things %s", thislocale);
   memcpy(&module_to_load[15], &thislocale[0], 5);
   scm_c_use_module(module_to_load);
 }
