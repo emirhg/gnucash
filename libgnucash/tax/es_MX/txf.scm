@@ -74,7 +74,7 @@
 
 (define txf-tax-entity-types
   (list
-   (cons 'PFCAE #("PFCAE" "Persona física con actividad empresarial"))
+   (cons 'PFCAE #("Persona física con actividad empresarial" "Declaración de ingresos/egresos para personas físicas"))
    (cons 'Other #("Ninguno" "Sin opciones provistas para el reporte de impuestos a los ingresos"))
  )
 )
@@ -138,9 +138,9 @@
 
 (define txf-help-categories
   (list
-   (cons 'H000 #(current "help" "Name of Current account is exported." 0 #f ""))
-   (cons 'H002 #(parent "help" "Name of Parent account is exported." 0 #f ""))
-   (cons 'H003 #(not-impl "help" "Not implemented yet, Do NOT Use!" 0 #f ""))))
+   (cons 'H000 #(current "ayuda" "El nombre de la cuenta Actual es exportado" 0 #f ""))
+   (cons 'H002 #(parent "ayuda" "El nombre de la cuenta padre es exportado" 0 #f ""))
+   (cons 'H003 #(not-impl "ayuda" "No implementado, No usar!" 0 #f ""))))
 
 (define txf-income-categories
  (list
@@ -148,25 +148,34 @@
    (list
     (cons 'N000 #(none "" "Sólo reporte de impuestos - No exportar TXF" 0 #f ""))
 
-    ;(cons 'N256 #(parent "ISR" "Ingresos del periodo" 1 #f "" ))
+    (cons 'N200 #(current "Salario" "Ingreso acumulado" 3 #f "No sé que es esto" ((2022 "Ingreso")) ))
+    (cons 'N201 #(current "Salario" "Aguinaldo" 0 #f "No sé que es esto" ((2022 "Ingreso excento")) ))
+    (cons 'N202 #(current "Salario" "Prima vacacional" 0 #f "No sé que es esto" ((2022 "Ingreso excento")) ))
+    (cons 'N203 #(current "Salario" "Otros ingresos excentos" 0 #f "No sé que es esto" ((2022 "Ingreso excento")) ))
 
-    (cons 'N200 #(current "Ingresos" "Ingresos totales propios de la actividad nacionales" 1 #f "No sé que es esto" ((2010 "Actividades gravadas a la tasa del 16%")) ))
-    (cons 'N201 #(current "Ingresos" "Ingresos totales propios de la actividad extranjeros" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))
-    (cons 'N202 #(current "Ingresos" "Ingresos exclusivos por autotransporte de carga federal" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))
-    (cons 'N203 #(current "Ingresos" "Anticipo de clientes" 1 #f "No sé que es esto" ((2010 "Actividades gravadas a la tasa del 16%")) ))
-    (cons 'N204 #(current "Ingresos" "Ganancia en la enajenación de acciones o por reembolsos de cápital" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))
-    (cons 'N205 #(current "Ingresos" "Ganancia en la enajenación de terrenos o activos fijos" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))
-    (cons 'N206 #(current "Ingresos" "Íntereses cobrados sin ajuste alguno y ganancia cambiaria relacionados con actividades propias" 1 #f "" ((2010 "Actividades gravadas a la tasa del 16%")) ))
-    (cons 'N207 #(current "Ingresos" "Servicios de transporte terrestres de pasajeros y transporte de bienes" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))
-    (cons 'N208 #(current "Ingresos" "Servicios de hospedaje" 1 #f "" ((2010 "Actividades gravadas a la tasa del 16%")) ))
-    (cons 'N209 #(current "Ingresos" "Enajenación de bienes y prestación de servicios" 1 #f "" ((2010 "Actividades gravadas a la tasa del 16%")) ))
-    (cons 'N210 #(current "Ingresos" "Servicios profesionales (Honorarios)" 1 #f "" ((2010 "Actividades gravadas a la tasa del 16%")) ))
+    (cons 'N210 #(current "Salario" "Indemnización" 0 #f "No sé que es esto" ((2022 "Ingreso")) ))
 
-    (cons 'N400 #(current "Ingresos" "Actividades excentas" 1 #f "" ((2010 "Actividades excentas"))))
+    (cons 'N400 #(current "Honorarios" "Ingresos totales propios de la actividad nacionales" 1 #f "No sé que es esto" ((2010 "Actividades gravadas a la tasa del 16%")) ))
+    (cons 'N401 #(current "Honorarios" "Ingresos totales propios de la actividad extranjeros" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))
+    #|(cons 'N202 #(current "Ingresos" "Ingresos exclusivos por autotransporte de carga federal" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))|#
+    #|(cons 'N203 #(current "Ingresos" "Anticipo de clientes" 1 #f "No sé que es esto" ((2010 "Actividades gravadas a la tasa del 16%")) ))|#
+    #|(cons 'N204 #(current "Ingresos" "Ganancia en la enajenación de acciones o por reembolsos de cápital" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))|#
+    #|(cons 'N205 #(current "Ingresos" "Ganancia en la enajenación de terrenos o activos fijos" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))|#
+    ;(cons 'N206 #(current "Ingresos" "Íntereses cobrados sin ajuste alguno y ganancia cambiaria relacionados con actividades propias" 1 #f "" ((2010 "Actividades gravadas a la tasa del 16%")) ))
+    #|(cons 'N207 #(current "Ingresos" "Servicios de transporte terrestres de pasajeros y transporte de bienes" 1 #f "" ((2010 "Actividades gravadas a la tasa del 0%")) ))|#
+    #|(cons 'N208 #(current "Ingresos" "Servicios de hospedaje" 1 #f "" ((2010 "Actividades gravadas a la tasa del 16%")) ))|#
+    (cons 'N409 #(current "Honorarios" "Enajenación de bienes y prestación de servicios" 1 #f "" ((2010 "Actividades gravadas a la tasa del 16%")) ))
+    (cons 'N410 #(current "Honorarios" "Servicios profesionales (Honorarios)" 1 #f "" ((2010 "Actividades gravadas a la tasa del 16%")) ))
 
-    (cons 'N900 #(none "NO-LIVA" "Bonos, descuentos y reembolsos" 1 #f "" ((2010 "Otros Ingresos")) ))
-    (cons 'N901 #(none "NO-LIVA" "Regalos y donativos" 1 #f "" ((2010 "Otros Ingresos")) ))
-    (cons 'N910 #(none "NO-LIVA" "Otras actividades excentas" 1 #f "" ((2010 "Otros Ingresos"))))
+    #|(cons 'N400 #(current "Ingresos" "Actividades excentas" 3 #f "" ((2010 "Actividades excentas"))))|#
+
+
+    (cons 'N900 #(current "Intereses" "Intereses nominales dentro del sistema financiero" 7 #f "" ((2022 "Intereses nóminales"))))
+    (cons 'N901 #(current "Intereses" "Intereses nominales fuera del sistema financiero" 7 #f "" ((2022 "Intereses nóminales"))))
+
+    #|(cons 'N900 #(none "NO-LIVA" "Bonos, descuentos y reembolsos" 1 #f "" ((2010 "Otros Ingresos")) ))|#
+    #|(cons 'N901 #(none "NO-LIVA" "Regalos y donativos" 1 #f "" ((2010 "Otros Ingresos")) ))|#
+    #|(cons 'N910 #(none "NO-LIVA" "Otras actividades excentas" 1 #f "" ((2010 "Otros Ingresos"))))|#
    )
   )
   (cons 'F1065
@@ -201,7 +210,10 @@
     ; alimenticios
     ; ** Viáticos y gastos de viaje
     (cons 'G300 #(parent "GASTOS" "Interés pagados sin ajute alguno e intereses moratorios" 1 #f "" ((2020 "Compras y gastos del periodo") )))
+    (cons 'G400 #(parent "GASTOS" "Consumo en restaurantes" 1 #f "" ((2020 "Compras y gastos del periodo") )))
+    (cons 'G401 #(parent "GASTOS" "Gastos" 1 #f "" ((2020 "Compras y gastos del periodo") )))
 
+    (cons 'G500 #(parent "GASTOS" "Cuotas al IMSS" 1 #f "" ((2020 "Compras y gastos del periodo") )))
     ; ** Honorarios
     ; ** Regalias y asistencia técnica
     ; ** Uso o goce temporal de bienes
@@ -221,11 +233,11 @@
     ; trabajador)
     ; ** Consumo en restaurantes
     (cons 'G350 #(parent "GASTOS" "Gasolina y mantenimiento de transporte" 1 #f "" ((2020 "Compras y gastos del periodo") )))
-    ; ** Deducción de mano de obra de trabajadores eventuales del campo, alimentación de ganado y gastos menores sin requisitos físcales
+    (cons 'G351 #(parent "GASTOS" "Deducción de mano de obra de trabajadores eventuales del campo, alimentación de ganado y gastos menores sin requisitos físcales" 1 #f "" ((2022 "Deducciones autorizadas") )))
     ; ** Deducción adicional por enajenación de libros, periódicos y revistas
     ; ** Deducción de donativos realizados a organismos descentralizados del
     ; Gobierno Federal
-    (cons 'N680 #(parent "GASTOS" "Gastos" 1 #f "" ((2020 "Compras y gastos del periodo") )))
+    (cons 'G680 #(parent "GASTOS" "Gastos" 1 #f "" ((2020 "Compras y gastos del periodo") )))
     ; ** Productos semiterminados o terminados
     ; ** Materias primas
     ; ** Transferencia de tecnología
@@ -254,7 +266,8 @@
     ; ** Automóviles, autobuses, camiones de carga, tractocamiones, montacargas y
     ; remolques
     ; ** Equipos de transporte otros
-    ; ** Otras inversiones en activos fijos
+    ; ** 
+    ;(cons 'G770 #(parent "Deducción físcal de inversiones" "Otras inversiones en activos fijos" 1 #f "" ((2022 "Deducciones autorizadas") )))
     ; ** Gastos, cargos diferidos y erogaciones en periodos preoperativos
     ; ** Adaptación a instalaciones para personas con capacidades diferentes
     ; ** Automóviles con propulsión de baterías eléctricas recargables y
@@ -263,7 +276,8 @@
     ; baterias eléctricas recargables** Equipos fijos de alimentación para
     ; vehículos eléctricos
     ; ** Automóviles
-    ; ** Computadoras personales de escritorio y portátiles
+    ;(cons 'G780 #(parent "GASTOS" "Computadoras personales de escritorio y portátiles" 1 #f "" ((2022 "Deducciones autorizadas") )))
+    ; **
     ; ** Inversiones de ejercicios anteriores
     ;
     ; * Adquisiciones en el ejercicio
@@ -273,6 +287,7 @@
     ; ** Automóviles, autobuses, camiones de carga, tractocamiones, montacargas y
     ; remolques
     ; ** Equipos de transporte otros
+    (cons 'G770 #(current "Adquisiciones en el ejercicio" "Otras inversiones en activos fijos" 1 #f "" ((2022 "Deducciones autorizadas") )))
     ; ** Otras inversiones en activos fijos
     ; ** Gastos, cargos diferidos y erogaciones en periodos preoperativos
     ; ** Adaptación a instalaciones para personas con capacidades diferentes
@@ -283,9 +298,11 @@
     ; ** Equipos fijos de alimentación para vehículos eléctricos
     ; ** Automóviles
     ; ** Computadoras personales de escritorio y portátiles
+    (cons 'G780 #(current "Adquisiciones en el ejercicio" "Computadoras personales de escritorio y portátiles" 1 #f "" ((2022 "Deducciones autorizadas") )))
     ; ** Inversiones de ejercicios anteriores
 
 
+    (cons 'N900 #(current "Intereses" "Pérdida" 7 #f "" ((2022 "Pérdida"))))
     ;(cons 'N256 #(not-impl "PFCAE" "Form 1040" 1 #f ""))
     ;(cons 'N681 #(none "PFCAE" "Participación de los trabajadores en las utilidades" 1 #f "" ((2019 "Schedule 1, 10") (2018 "Schedule 1, 23") (2007 "23") (2006 "NA - Expired") (2002 "23"))))
    )
