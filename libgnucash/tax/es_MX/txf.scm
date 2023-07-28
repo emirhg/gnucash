@@ -209,7 +209,7 @@
     ; ** Maniobras, empaques y fletes en el campo para la enajenacions de productos
     ; alimenticios
     ; ** Viáticos y gastos de viaje
-    (cons 'G300 #(parent "GASTOS" "Interés pagados sin ajute alguno e intereses moratorios" 1 #f "" ((2020 "Compras y gastos del periodo") )))
+    (cons 'G300 #(parent "GASTOS" "Interés pagados sin ajuste alguno e intereses moratorios" 1 #f "" ((2020 "Compras y gastos del periodo") )))
     (cons 'G400 #(parent "GASTOS" "Consumo en restaurantes" 1 #f "" ((2020 "Compras y gastos del periodo") )))
     (cons 'G401 #(parent "GASTOS" "Gastos" 1 #f "" ((2020 "Compras y gastos del periodo") )))
 
