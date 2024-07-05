@@ -45,10 +45,10 @@
 (export gnc:owner-report-create-with-enddate)
 
 
-;; gnc-locale-name depends on ${LC_ALL}. Unknow function tu use LC_MONETARY (propably the most coherent setting).
+;; gnc-locale-name depends on ${LC_ALL}. Unknow function to use LC_MONETARY (probably the most coherent setting to be able to use UI in une Language and Tax Report in another locale).
 
 (let
-  ((loc-spec (if ( < (string-length (gnc-locale-name)) 12 ) (substring (gnc-locale-name) 0 5) "en_US" )))
+  ((loc-spec (if (and ( >= (string-length (gnc-locale-name)) 5 ) ( < (string-length (gnc-locale-name)) 12 )) (substring (gnc-locale-name) 0 5) "en_US" )))
   (report-module-loader
    (list
     '(gnucash reports standard) ; prefix for standard reports included in gnucash

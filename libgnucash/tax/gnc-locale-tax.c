@@ -46,16 +46,20 @@ gnc_locale_tax_init(void)
   char module_to_load[] = "gnucash locale en_US tax";
 # ifdef G_OS_WIN32
     gchar *thislocale = g_win32_getlocale();
-    // g_free(thislocale);
 # else /* !G_OS_WIN32 */
     // REVIEW: gnucash/report/reports/reports.scm uses gnc-locale-name which depends on ${LC_ALL}
     const char *thislocale = setlocale(LC_ALL, NULL);
     // LC_ALL returns all locales when LC_ALL is not set. The length of the string is check to verify if it was set or not
-    if (!*thislocale || strlen(thislocale) > 11 ){
+# endif /* G_OS_WIN32 */
+    if (!*thislocale || strlen(thislocale) > 11 || !strcmp(thislocale,  "C") ){
       thislocale="en_US";
     }
-# endif /* G_OS_WIN32 */
   memcpy(&module_to_load[15], &thislocale[0], 5);
+
+# ifdef G_OS_WIN32
+    g_free(thislocale);
+# endif /* G_OS_WIN32 */
+
   scm_c_use_module(module_to_load);
 }
 
