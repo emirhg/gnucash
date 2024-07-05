@@ -121,7 +121,7 @@
 
 (define (gnc:txf-get-help categories code)
   (or (assv-ref txf-help-strings code)
-      (G_ "No hay ayuda disponible.")))
+      (G_ "No help available.")))
 
 (define (gnc:txf-get-codes categories tax-entity-type)
   (and-let* ((sym (string->symbol tax-entity-type))
@@ -138,7 +138,7 @@
 
 (define txf-help-categories
   (list
-   (cons 'H000 #(current "ayuda" "El nombre de la cuenta Actual es exportado" 0 #f ""))
+   (cons 'H000 #(current "ayuda" "El nombre de la cuenta actual es exportado" 0 #f ""))
    (cons 'H002 #(parent "ayuda" "El nombre de la cuenta padre es exportado" 0 #f ""))
    (cons 'H003 #(not-impl "ayuda" "No implementado, No usar!" 0 #f ""))))
 

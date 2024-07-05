@@ -203,7 +203,7 @@ msgstr "Inicio de este mes"
 #: bindings/guile/date-utilities.scm:762
 #: libgnucash/engine/gnc-option-date.cpp:168
 msgid "First day of the current month."
-msgstr "Primer día del mes efectivo."
+msgstr "Primer día del mes actual."
 
 #: bindings/guile/date-utilities.scm:766
 #: gnucash/gnome-utils/gnc-period-select.c:82
@@ -214,13 +214,13 @@ msgstr "Final de este mes"
 #: bindings/guile/date-utilities.scm:769
 #: libgnucash/engine/gnc-option-date.cpp:176
 msgid "Last day of the current month."
-msgstr "Último día del mes efectivo."
+msgstr "Último día del mes actual."
 
 #: bindings/guile/date-utilities.scm:773
 #: gnucash/gnome-utils/gnc-period-select.c:67
 #: libgnucash/engine/gnc-option-date.cpp:183
 msgid "Start of previous month"
-msgstr "Inicio del anterior mes"
+msgstr "Inicio del mes anterior"
 
 #: bindings/guile/date-utilities.scm:776
 #: libgnucash/engine/gnc-option-date.cpp:184
@@ -13710,7 +13710,7 @@ msgstr "_Incluir Subcuentas"
 
 #: gnucash/gtkbuilder/dialog-account.glade:1755
 msgid "More Properties"
-msgstr "Más p_ropiedades"
+msgstr "Más propiedades"
 
 #: gnucash/gtkbuilder/dialog-account.glade:1781
 msgid "<b>Balance Information</b>"
@@ -23020,7 +23020,7 @@ msgstr "Anular o modificar Origen: y Destino:."
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:151
 #: gnucash/report/reports/locale-specific/us/taxtxf.scm:181
 msgid "Use From - To"
-msgstr "Emplee origen - destino"
+msgstr "Usar De - Hasta"
 
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:152
 #: gnucash/report/reports/locale-specific/us/taxtxf.scm:182

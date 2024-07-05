@@ -115,7 +115,7 @@
 (use-modules (ice-9 format))
 (use-modules (gnucash html))
 
-(define reportname (N_ "Declaración del ejercicio físcal"))
+(define reportname (N_ "Tax Schedule Report/TXF Export"))
 
 ;(define MXN-currency (gnc-commodity-table-lookup
 ;                        (gnc-commodity-table-get-table (gnc-get-current-book))
@@ -181,7 +181,7 @@
     "c" (N_ "Override or modify From: & To:.")
     (if after-tax-day 'from-to 'last-year)
     (list (vector 'from-to (N_ "Use From - To") (N_ "Use From - To period."))
-          (vector '1st-est (N_ "1st Est Tax Quarter") (N_ "Jan 1 - Mar 31."))
+          (vector '1st-est (N_ "1st Est Tax Quarter (Jan 1 - Mar 31)") (N_ "Jan 1 - Mar 31."))
           (vector '2nd-est (N_ "2nd Est Tax Quarter") (N_ "Apr 1 - May 31."))
           ;; Translators: The US tax quarters are different from
           ;; actual year's quarters! See the definition of
@@ -258,9 +258,9 @@
     "m" (N_ "Select date to use for PriceDB lookups.")
     'conv-to-tran-date
     (list (list->vector
-           (list 'conv-to-tran-date (N_ "Nearest transaction date") (N_ "Use nearest to transaction date.")))
+           (list 'conv-to-tran-date (N_ "Nearest to transaction date") (N_ "Use nearest to transaction date.")))
           (list->vector
-           (list 'conv-to-report-date (N_ "Nearest report date") (N_ "Use nearest to report date.")))
+           (list 'conv-to-report-date (N_ "Nearest to report date") (N_ "Use nearest to report date.")))
     )))
 
   #t
@@ -3331,24 +3331,24 @@
  'version 1
  'name reportname
  'report-guid "ed4c602ec69d4c6d85eff319e20d33f7"
- 'menu-name (N_ "Declaración del ejercio físcal")
+ 'menu-name (N_ "Tax Schedule Report/TXF Export")
  ;;'menu-path (list gnc:menuname-taxes)
- 'menu-tip (N_ "Declaración de ingresos y egresos")
+ 'menu-tip (N_ "Taxable Income/Deductible Expenses with Transaction Detail/Export to .TXF file")
  'options-generator tax-options-generator
  'renderer (lambda (report-obj)
              (generate-tax-schedule
-              (G_ "Ingresos impositivos/Gastos deducibles")
-              (G_ "Este reporte muestra el detalle de las transacciones para las cuentas \
-relacionadas con impuestos")
+              (G_ "Taxable Income/Deductible Expenses")
+              (G_ "This report shows transaction detail for your accounts \
+related to Income Taxes.")
               report-obj
               #t
               #f))
  'export-types (list (cons "TXF" 'txf))
  'export-thunk (lambda (report-obj choice file-name)
                  (generate-tax-schedule
-                  (G_ "Ingreso impositivo/Gastos deducibles")
-                  (G_ "Esta página muestra el detalle de transacciones para cuentas de \
-                  Ingresos impositivos relevantes.")
+                  (G_ "Taxable Income/Deductible Expenses")
+                  (G_ "This page shows transaction detail for relevant \
+Income Tax accounts.")
                   report-obj
                   #f
                   file-name)))
