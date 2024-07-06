@@ -17,7 +17,7 @@
 # gallegonovato <fran-carro@hotmail.es>, 2023, 2024.
 # Jaime Marquínez Ferrándiz <jaime.marquinez.ferrandiz@fastmail.net>, 2023.
 # Francisco <fhiegom@outlook.es>, 2023.
-# Emir Herrera González <emir.herrera@gmail.com>, 2024
+# Emir Herrera González <emir.herrera@gmail.com>, 2024.
 #
 #
 # ###############################################################################
@@ -86,7 +86,7 @@ msgstr ""
 "Project-Id-Version: GnuCash 5.6\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/enter_bug.cgi?"
 "product=GnuCash&component=Translations\n"
-"POT-Creation-Date: 2024-03-23 03:13+0100\n"
+"POT-Creation-Date: 2024-07-06 12:24-0600\n"
 "PO-Revision-Date: 2024-03-17 12:01+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnucash/gnucash/"
@@ -476,6 +476,8 @@ msgstr "Occidental"
 #: borrowed/goffice/go-charmap-sel.c:84
 #: gnucash/gtkbuilder/assistant-loan.glade:964
 #: gnucash/gtkbuilder/dialog-account.glade:1029
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1711
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3258
 #: gnucash/report/reports/standard/account-piecharts.scm:457
 #: gnucash/report/reports/standard/category-barchart.scm:547
 msgid "Other"
@@ -1386,13 +1388,14 @@ msgstr "Opción de Amortización Prestamentaria: «%s»"
 #: gnucash/import-export/csv-exp/csv-transactions-export.cpp:374
 #: gnucash/import-export/csv-imp/gnc-imp-props-price.cpp:52
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:59
-#: gnucash/import-export/import-main-matcher.cpp:1572
+#: gnucash/import-export/import-main-matcher.cpp:1571
 #: gnucash/import-export/import-match-picker.cpp:313
 #: gnucash/import-export/import-match-picker.cpp:353
 #: gnucash/import-export/qif-imp/assistant-qif-import.c:3823
 #: gnucash/import-export/qif-imp/assistant-qif-import.c:3874
 #: gnucash/register/ledger-core/gncEntryLedgerModel.c:62
 #: gnucash/register/ledger-core/split-register-model.c:233
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:359
 #: gnucash/report/reports/standard/account-summary.scm:77
 #: gnucash/report/reports/standard/advanced-portfolio.scm:68
 #: gnucash/report/reports/standard/balsheet-pnl.scm:1041
@@ -1469,7 +1472,7 @@ msgstr "Error al añadir precio."
 #: gnucash/import-export/aqb/gnc-ab-utils.c:476
 #: gnucash/import-export/bi-import/dialog-bi-import-gui.c:147
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:66
-#: gnucash/import-export/import-main-matcher.cpp:1573
+#: gnucash/import-export/import-main-matcher.cpp:1572
 #: gnucash/import-export/import-match-picker.cpp:312
 #: gnucash/import-export/qif-imp/dialog-account-picker.c:433
 #: gnucash/register/ledger-core/split-register-model.c:346
@@ -2040,10 +2043,12 @@ msgstr "Introduzca el número de acciones ganadas o perdidas en la transacción.
 #: gnucash/gtkbuilder/dialog-transfer.glade:205
 #: gnucash/import-export/csv-exp/csv-transactions-export.cpp:382
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:72
-#: gnucash/import-export/import-main-matcher.cpp:1577
+#: gnucash/import-export/import-main-matcher.cpp:1576
 #: gnucash/import-export/import-match-picker.cpp:316
 #: gnucash/import-export/import-match-picker.cpp:356
 #: gnucash/register/ledger-core/split-register-model.c:360
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:374
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:375
 #: gnucash/report/reports/standard/general-ledger.scm:71
 #: gnucash/report/reports/standard/general-ledger.scm:91
 #: gnucash/report/reports/standard/register.scm:139
@@ -2146,6 +2151,9 @@ msgstr "Factura"
 #: gnucash/import-export/csv-imp/gnc-imp-props-price.cpp:51
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:57
 #: gnucash/import-export/import-pending-matches.cpp:189
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1815
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3034
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3035
 #: gnucash/report/reports/standard/register.scm:216
 #: gnucash/report/trep-engine.scm:275 gnucash/report/trep-engine.scm:306
 #: gnucash/report/trep-engine.scm:1000 libgnucash/engine/gncOwner.c:212
@@ -2688,13 +2696,14 @@ msgstr "Enlaces de Transacción Documental"
 #: gnucash/import-export/csv-exp/csv-transactions-export.cpp:377
 #: gnucash/import-export/csv-exp/csv-tree-export.cpp:61
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:61
-#: gnucash/import-export/import-main-matcher.cpp:1576
+#: gnucash/import-export/import-main-matcher.cpp:1575
 #: gnucash/import-export/import-match-picker.cpp:315
 #: gnucash/import-export/import-match-picker.cpp:355
 #: gnucash/import-export/qif-imp/assistant-qif-import.c:3833
 #: gnucash/import-export/qif-imp/assistant-qif-import.c:3884
 #: gnucash/register/ledger-core/gncEntryLedgerModel.c:67
 #: gnucash/register/ledger-core/split-register-model.c:300
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:367
 #: gnucash/report/reports/standard/account-summary.scm:380
 #: gnucash/report/reports/standard/general-journal.scm:96
 #: gnucash/report/reports/standard/general-ledger.scm:70
@@ -2938,6 +2947,7 @@ msgstr "Número/Operación"
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:65
 #: gnucash/register/ledger-core/gncEntryLedgerModel.c:57
 #: gnucash/register/ledger-core/split-register-model.c:332
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:375
 #: gnucash/report/reports/standard/invoice.scm:91
 #: gnucash/report/reports/standard/invoice.scm:418
 msgid "Action"
@@ -2995,6 +3005,9 @@ msgstr "Descripción, Anotaciones o Memorándum"
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:62
 #: gnucash/import-export/customer-import/dialog-customer-import-gui.c:133
 #: gnucash/register/ledger-core/split-register-model.c:496
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:371
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:374
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:375
 #: gnucash/report/reports/standard/account-summary.scm:408
 #: gnucash/report/reports/standard/balsheet-eg.scm:188
 #: gnucash/report/reports/standard/receipt.scm:38
@@ -3416,6 +3429,7 @@ msgstr "Abierto"
 #: gnucash/gtkbuilder/dialog-transfer.glade:155
 #: gnucash/register/ledger-core/split-register-model.c:260
 #: gnucash/register/ledger-core/split-register-model.c:280
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:365
 #: gnucash/report/reports/standard/general-journal.scm:95
 #: gnucash/report/reports/standard/general-ledger.scm:89
 #: gnucash/report/reports/standard/register.scm:135
@@ -3453,11 +3467,12 @@ msgstr "Buscar Factura"
 #: gnucash/gtkbuilder/dialog-transfer.glade:102
 #: gnucash/import-export/csv-imp/gnc-imp-props-price.cpp:53
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:67
-#: gnucash/import-export/import-main-matcher.cpp:1575
+#: gnucash/import-export/import-main-matcher.cpp:1574
 #: gnucash/import-export/import-match-picker.cpp:314
 #: gnucash/import-export/import-match-picker.cpp:354
 #: gnucash/import-export/qif-imp/assistant-qif-import.c:3844
 #: gnucash/import-export/qif-imp/assistant-qif-import.c:3895
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:382
 #: gnucash/report/reports/standard/general-journal.scm:101
 #: gnucash/report/reports/standard/general-ledger.scm:81
 #: gnucash/report/reports/standard/general-ledger.scm:101
@@ -4261,6 +4276,7 @@ msgstr "Buscar Proveedor"
 #: gnucash/import-export/qif-imp/qif-dialog-utils.scm:97
 #: gnucash/import-export/qif-imp/qif-dialog-utils.scm:103
 #: gnucash/register/ledger-core/split-register.c:2636
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:486
 #: gnucash/report/reports/standard/advanced-portfolio.scm:1062
 #: gnucash/report/reports/standard/balsheet-pnl.scm:1219
 #: gnucash/report/reports/standard/net-charts.scm:332
@@ -7910,6 +7926,7 @@ msgstr "Contabilidad financiara personal y pequeños negocios."
 #: gnucash/gnome-utils/gnc-main-window.cpp:5268
 msgid "translator-credits"
 msgstr ""
+"Emir Herrera González, 2024\n"
 "Fco. Javier Serrador, 2018 - 2023\n"
 "\n"
 "Adolfo Jayme Barrientos, 2021\n"
@@ -8063,6 +8080,7 @@ msgstr "Cuenta nueva de nivel techo"
 #: gnucash/import-export/csv-exp/csv-transactions-export.cpp:384
 #: gnucash/import-export/csv-exp/csv-tree-export.cpp:60
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:276
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:2169
 #: gnucash/report/reports/standard/general-ledger.scm:72
 #: gnucash/report/reports/standard/general-ledger.scm:92
 #: gnucash/report/reports/standard/trial-balance.scm:561
@@ -18318,7 +18336,9 @@ msgstr "Rango de fechas de transacciones a obtener:"
 
 #: gnucash/import-export/aqb/dialog-ab.glade:369
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:145
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:175
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:175
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:176
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1963
 #: gnucash/report/reports/standard/customer-summary.scm:40
 #: gnucash/report/reports/standard/new-owner-report.scm:44
 msgid "From"
@@ -18338,7 +18358,9 @@ msgstr "I_ntroducir fecha:"
 
 #: gnucash/import-export/aqb/dialog-ab.glade:474
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:145
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:175
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:175
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:176
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1966
 #: gnucash/report/reports/standard/customer-summary.scm:41
 #: gnucash/report/reports/standard/new-aging.scm:39
 #: gnucash/report/reports/standard/new-owner-report.scm:45
@@ -19552,7 +19574,7 @@ msgid "File exported successfully!\n"
 msgstr "¡Fichero exportado correctamente!\n"
 
 #: gnucash/import-export/csv-exp/csv-transactions-export.cpp:135
-#: gnucash/import-export/import-main-matcher.cpp:1874
+#: gnucash/import-export/import-main-matcher.cpp:1873
 #: gnucash/report/reports/standard/register.scm:217
 #: libgnucash/engine/Split.cpp:1644 libgnucash/engine/Split.cpp:1661
 msgid "-- Split Transaction --"
@@ -20314,122 +20336,122 @@ msgstr "a/m/d"
 msgid "y/d/m"
 msgstr "a/d/m"
 
-#: gnucash/import-export/import-main-matcher.cpp:503
+#: gnucash/import-export/import-main-matcher.cpp:502
 msgid "No new transactions were found in this import."
 msgstr ""
 "No fue encontrada ninguna de las transacciones nuevas dentro de esta "
 "importación."
 
-#: gnucash/import-export/import-main-matcher.cpp:775
+#: gnucash/import-export/import-main-matcher.cpp:774
 msgid "Destination account for the auto-balance split."
 msgstr "Cuenta de destino para el desglose de cuadrado automático."
 
-#: gnucash/import-export/import-main-matcher.cpp:1004
+#: gnucash/import-export/import-main-matcher.cpp:1003
 msgid "Click Edit to modify"
 msgstr "Pulsa Editar para modificar"
 
 #. Translators: Menu entry, no full stop
-#: gnucash/import-export/import-main-matcher.cpp:1413
+#: gnucash/import-export/import-main-matcher.cpp:1412
 msgid "_Assign transfer account"
 msgstr "_Asignar cuenta de transferencia"
 
 #. Translators: Menu entry, no full stop
-#: gnucash/import-export/import-main-matcher.cpp:1418
+#: gnucash/import-export/import-main-matcher.cpp:1417
 msgid "Assign e_xchange rate"
 msgstr "Establecer el _tipo de cambio"
 
 #. Translators: Menu entry, no full stop
-#: gnucash/import-export/import-main-matcher.cpp:1423
+#: gnucash/import-export/import-main-matcher.cpp:1422
 msgid "_Edit description, notes, or memo"
 msgstr "_Editar descripción, anotaciones o memorándum"
 
 #. Translators: Menu entry, no full stop
-#: gnucash/import-export/import-main-matcher.cpp:1428
+#: gnucash/import-export/import-main-matcher.cpp:1427
 msgid "_Reset all edits"
 msgstr "_Restablecer predeterminados"
 
-#: gnucash/import-export/import-main-matcher.cpp:1578
+#: gnucash/import-export/import-main-matcher.cpp:1577
 msgctxt "Column header for 'Adding transaction'"
 msgid "A"
 msgstr "A"
 
 # Update And Reconcile
-#: gnucash/import-export/import-main-matcher.cpp:1582
+#: gnucash/import-export/import-main-matcher.cpp:1581
 msgctxt "Column header for 'Updating plus Clearing transaction'"
 msgid "U+C"
 msgstr "A+V"
 
-#: gnucash/import-export/import-main-matcher.cpp:1586
+#: gnucash/import-export/import-main-matcher.cpp:1585
 msgctxt "Column header for 'Clearing transaction'"
 msgid "C"
 msgstr "P"
 
-#: gnucash/import-export/import-main-matcher.cpp:1593
+#: gnucash/import-export/import-main-matcher.cpp:1592
 msgid "Info"
 msgstr "Info"
 
-#: gnucash/import-export/import-main-matcher.cpp:1600
+#: gnucash/import-export/import-main-matcher.cpp:1599
 #: gnucash/report/stylesheets/head-or-tail.scm:91
 msgid "Additional Comments"
 msgstr "Comentarios Adicionales"
 
-#: gnucash/import-export/import-main-matcher.cpp:1985
+#: gnucash/import-export/import-main-matcher.cpp:1984
 msgid "New, already balanced"
 msgstr "Nuevo, ya cuadrado"
 
 #. Translators: %1$s is the amount to be transferred,
 #. %2$s the destination account.
-#: gnucash/import-export/import-main-matcher.cpp:2007
+#: gnucash/import-export/import-main-matcher.cpp:2006
 #, c-format
 msgid "New, transfer %s to (manual) \"%s\""
 msgstr "Nuevo, transferir %s a «%s» (manual)"
 
 #. Translators: %1$s is the amount to be transferred,
 #. %2$s the destination account.
-#: gnucash/import-export/import-main-matcher.cpp:2015
+#: gnucash/import-export/import-main-matcher.cpp:2014
 #, c-format
 msgid "New, transfer %s to (auto) \"%s\""
 msgstr "Nuevo, transferir %s a «%s» (automático)"
 
 #. Translators: %s is the amount to be transferred.
-#: gnucash/import-export/import-main-matcher.cpp:2028
+#: gnucash/import-export/import-main-matcher.cpp:2027
 #, c-format
 msgid "New, UNBALANCED (need price to transfer %s to acct %s)!"
 msgstr ""
 "¡Nuevo, DESCUADRADO (se necesita precio para transferir %s a la cuenta %s)!"
 
 #. Translators: %s is the amount to be transferred.
-#: gnucash/import-export/import-main-matcher.cpp:2044
+#: gnucash/import-export/import-main-matcher.cpp:2043
 #, c-format
 msgid "New, UNBALANCED (need acct to transfer %s)!"
 msgstr "¡Nuevo, DESCUADRADO (se necesita cuenta para transferir %s)!"
 
-#: gnucash/import-export/import-main-matcher.cpp:2062
+#: gnucash/import-export/import-main-matcher.cpp:2061
 #, c-format
 msgid "Reconcile (manual) match to %s"
 msgstr "Conciliar cotejo (manual) a %s"
 
-#: gnucash/import-export/import-main-matcher.cpp:2067
+#: gnucash/import-export/import-main-matcher.cpp:2066
 #, c-format
 msgid "Reconcile (auto) match to %s"
 msgstr "Conciliar cotejo (automático) a %s"
 
-#: gnucash/import-export/import-main-matcher.cpp:2076
-#: gnucash/import-export/import-main-matcher.cpp:2105
+#: gnucash/import-export/import-main-matcher.cpp:2075
+#: gnucash/import-export/import-main-matcher.cpp:2104
 msgid "Match missing!"
 msgstr "¡No hay cotejo!"
 
-#: gnucash/import-export/import-main-matcher.cpp:2091
+#: gnucash/import-export/import-main-matcher.cpp:2090
 #, c-format
 msgid "Update and reconcile (manual) match to %s"
 msgstr "Actualizar y conciliar cotejo (manual) a %s"
 
-#: gnucash/import-export/import-main-matcher.cpp:2096
+#: gnucash/import-export/import-main-matcher.cpp:2095
 #, c-format
 msgid "Update and reconcile (auto) match to %s"
 msgstr "Actualizar y conciliar cotejo (automático) a %s"
 
-#: gnucash/import-export/import-main-matcher.cpp:2113
+#: gnucash/import-export/import-main-matcher.cpp:2112
 msgid "Do not import (no action selected)"
 msgstr "No importar (ninguna operación seleccionada)"
 
@@ -20774,6 +20796,7 @@ msgstr "Gan. cap. (a corto)"
 #: gnucash/import-export/qif-imp/qif-dialog-utils.scm:109
 #: gnucash/import-export/qif-imp/qif-dialog-utils.scm:113
 #: gnucash/register/ledger-core/split-register.c:2620
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:501
 #: gnucash/report/reports/standard/balance-sheet.scm:468
 #: gnucash/report/reports/standard/balsheet-pnl.scm:1059
 #: gnucash/report/reports/standard/budget-balance-sheet.scm:685
@@ -21750,6 +21773,7 @@ msgid "T-Ref"
 msgstr "I-Ref"
 
 #: gnucash/register/ledger-core/split-register-model.c:283
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:374
 #: gnucash/report/reports/standard/register.scm:133
 msgid "T-Num"
 msgstr "I-Núm"
@@ -22421,6 +22445,7 @@ msgid "Report name"
 msgstr "Nombre del boletín"
 
 #: gnucash/report/report-core.scm:166
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1968
 msgid "Stylesheet"
 msgstr "Hoja de Estilo"
 
@@ -23008,27 +23033,33 @@ msgid "Tax Report / TXF Export"
 msgstr "Boletín impositivo / Exportar a TXF"
 
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:148
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:178
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:178
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:180
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1967
 msgid "Alternate Period"
 msgstr "Periodo Alterno"
 
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:149
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:179
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:179
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:181
 msgid "Override or modify From: & To:."
 msgstr "Anular o modificar Origen: y Destino:."
 
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:151
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:181
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:181
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:183
 msgid "Use From - To"
 msgstr "Usar De - Hasta"
 
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:152
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:182
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:182
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:184
 msgid "1st Est Tax Quarter (Jan 1 - Mar 31)"
 msgstr "1º Trim. Impon. Est. (1 ene - 31 mar)"
 
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:153
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:183
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:183
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:185
 msgid "2nd Est Tax Quarter (Apr 1 - May 31)"
 msgstr "2º Trim. Impon. Est. (1 abr - 31 may)"
 
@@ -23036,27 +23067,32 @@ msgstr "2º Trim. Impon. Est. (1 abr - 31 may)"
 #. actual year's quarters! See the definition of
 #. tax-qtr-real-qtr-year variable above.
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:154
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:187
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:187
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:189
 msgid "3rd Est Tax Quarter (Jun 1 - Aug 31)"
 msgstr "3º Trim. Impon. Est. (1 jun - 31 ago)"
 
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:155
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:188
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:188
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:190
 msgid "4th Est Tax Quarter (Sep 1 - Dec 31)"
 msgstr "4º Trim. Impon. Est. (1 sep - 31 dic)"
 
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:156
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:189
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:189
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:191
 msgid "Last Year"
 msgstr "Último año"
 
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:157
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:190
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:190
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:192
 msgid "Last Yr 1st Est Tax Qtr (Jan 1 - Mar 31)"
 msgstr "Ult. año 1º Trim. Imp. Est (1 ene- 31 mar)"
 
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:158
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:191
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:191
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:193
 msgid "Last Yr 2nd Est Tax Qtr (Apr 1 - May 31)"
 msgstr "Ult. año 2º Trim. Imp. Est (1 abr - 31 may)"
 
@@ -23064,27 +23100,34 @@ msgstr "Ult. año 2º Trim. Imp. Est (1 abr - 31 may)"
 #. actual year's quarters! See the definition of
 #. tax-qtr-real-qtr-year variable above.
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:159
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:195
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:195
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:197
 msgid "Last Yr 3rd Est Tax Qtr (Jun 1 - Aug 31)"
 msgstr "Ult. año 3º Trim. Imp. Est. (1 jun - 31 ago)"
 
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:160
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:196
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:196
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:198
 msgid "Last Yr 4th Est Tax Qtr (Sep 1 - Dec 31)"
 msgstr "Ult. año 4º Trim. Imp. Est (1 sep - 31 dic)"
 
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:163
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:199
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:199
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:202
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1993
 msgid "Select Accounts (none = all)"
 msgstr "Seleccionar cuentas (ninguna = todas)"
 
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:164
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:200
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:200
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:203
 msgid "Select accounts."
 msgstr "Seleccionar cuentas."
 
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:168
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:203
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:203
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:209
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1970
 msgid "Suppress $0.00 values"
 msgstr "Suprimir valores $0.00"
 
@@ -23138,95 +23181,127 @@ msgstr "XML"
 msgid "This page shows your Taxable Income and Deductible Expenses."
 msgstr "Esta página muestra sus Ingresos Imponibles y Gastos Deducibles."
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:119
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:119
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:118
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3331
 msgid "Tax Schedule Report/TXF Export"
 msgstr "Boletín de Planificación Imponible/Exportación a TXF"
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:204
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:204
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:210
 msgid "$0.00 valued Tax codes won't be printed."
 msgstr "No escribir códigos impositivos valorados a $0.00."
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:207
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:207
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:214
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1972
 msgid "Do not print full account names"
 msgstr "No escribir los nombres completos de la cuenta"
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:208
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:208
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:215
 msgid "Do not print all Parent account names."
 msgstr "No escribir ningún nombre de cuenta Precedente."
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:211
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:211
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:219
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1974
 msgid "Print all Transfer To/From Accounts"
 msgstr "Escribir todas las Cuentas de Origen/Destino de Transferencias"
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:212
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:212
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:220
 msgid "Print all split details for multi-split transactions."
 msgstr ""
 "Escribir todos los detalles de desgloses para transacciones multidesglosadas."
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:215
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:215
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:224
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1976
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3301
 msgid "Print TXF export parameters"
 msgstr "Escriba los parámetros de exportación TXF"
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:216
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:216
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:225
 msgid "Show TXF export parameters for each TXF code/account on report."
 msgstr ""
 "Muestra parámetros de exportación TXF para cada código/cuenta TXF en el "
 "boletín."
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:220
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:220
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:230
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1988
 msgid "Do not print T-Num:Memo data"
 msgstr "No escribir datos T-Num:Memorandum"
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:221
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:221
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:231
 msgid "Do not print T-Num:Memo data for transactions."
 msgstr "No escribir datos T-Num:Memorandum para transacciones."
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:223
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:223
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:234
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1984
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1986
 msgid "Do not print Action:Memo data"
 msgstr "No escribir datos Operación:Memorandum"
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:224
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:224
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:235
 msgid "Do not print Action:Memo data for transactions."
 msgstr "No escribir datos Operación:Memorandum para transacciones."
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:227
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:227
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:239
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1978
 msgid "Do not print transaction detail"
 msgstr "No escribir detalles de transacción"
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:228
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:228
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:240
 msgid "Do not print transaction detail for accounts."
 msgstr "No declarar detalles de transacción para cuentas."
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:231
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:231
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:244
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1980
 msgid "Do not use special date processing"
 msgstr "No emplee el procesamiento de datos especial"
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:232
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:232
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:245
 msgid "Do not print transactions out of specified dates."
 msgstr "No declarar transacciones externas de fechas especificadas."
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:235
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:235
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:249
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1991
 msgid "Currency conversion date"
 msgstr "Fecha del conversión de monedas"
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:236
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:236
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:250
 msgid "Select date to use for PriceDB lookups."
 msgstr "Seleccione una fecha para las búsquedas en PriceDB."
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:239
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:239
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:253
 msgid "Nearest to transaction date"
 msgstr "El más cercano a la fecha de transacción"
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:241
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:241
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:255
 #: gnucash/report/reports/standard/advanced-portfolio.scm:77
 msgid "Nearest to report date"
 msgstr "Más cercano para fecha del boletín"
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:3310
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:3310
 msgid "Tax Schedule Report & TXF Export"
 msgstr "Boletín de Planificación Imponible y Exportación TXF"
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:3312
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:3312
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3333
 msgid ""
 "Taxable Income/Deductible Expenses with Transaction Detail/Export to .TXF "
 "file"
@@ -23234,12 +23309,15 @@ msgstr ""
 "Ingresos Imponibles/Gastos Deducibles con Detalle de Transacción/Exportación "
 "al fichero .TXF"
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:3316
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:3324
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:3316
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:3324
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3337
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3346
 msgid "Taxable Income/Deductible Expenses"
 msgstr "Ingresos Imponibles/Gastos Deducibles"
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:3317
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:3317
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3338
 msgid ""
 "This report shows transaction detail for your accounts related to Income "
 "Taxes."
@@ -23247,11 +23325,475 @@ msgstr ""
 "Este boletín muestra transacción detallada para sus cuentas relacionadas "
 "para Imposiciones sobre Ingresos."
 
-#: gnucash/report/reports/locale-specific/us/taxtxf.scm:3325
+#: gnucash/report/reports/locale-specific/en_US/taxtxf.scm:3325
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3347
 msgid "This page shows transaction detail for relevant Income Tax accounts."
 msgstr ""
 "Esta página muestra los detalles de las transacciones para cuentas "
 "relevantes de Imposiciones sobre Ingresos."
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:162
+#, fuzzy
+#| msgid "Display the transaction type?"
+msgid " is the wrong type."
+msgstr "¿Representar la familia transaccional?"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:183
+#, fuzzy
+#| msgid "Use From - To"
+msgid "Use From - To period."
+msgstr "Usar De - Hasta"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:184
+msgid "Jan 1 - Mar 31."
+msgstr ""
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:185
+msgid "Apr 1 - May 31."
+msgstr ""
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:253
+#, fuzzy
+#| msgid "Nearest to transaction date"
+msgid "Use nearest to transaction date."
+msgstr "El más cercano a la fecha de transacción"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:255
+#, fuzzy
+#| msgid "Nearest to report date"
+msgid "Use nearest to report date."
+msgstr "Más cercano para fecha del boletín"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:364
+#: gnucash/report/reports/standard/general-journal.scm:94
+#: gnucash/report/reports/standard/general-ledger.scm:68
+#: gnucash/report/reports/standard/register.scm:134
+#: gnucash/report/reports/standard/register.scm:351
+#: gnucash/report/trep-engine.scm:915 gnucash/report/trep-engine.scm:2240
+msgid "Num/Action"
+msgstr "Núm/Operación"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:379
+#, fuzzy
+#| msgid "Capital Gains"
+msgid "Capital Gains Data"
+msgstr "Ganancias de capital"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:380
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:811
+#, fuzzy
+#| msgid "Print all Transfer To/From Accounts"
+msgid "Transfer To/From Account(s)"
+msgstr "Escribir todas las Cuentas de Origen/Destino de Transferencias"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:395
+#, fuzzy
+#| msgid "Total For "
+msgid "Total for "
+msgstr "Total para "
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:435
+#, fuzzy
+#| msgid "Capital Gains Account"
+msgid "Capital Gains Totals: Sales Amount: "
+msgstr "Cuenta de ganancias de capital"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:441
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:805
+msgid "Cost"
+msgstr ""
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:441
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:805
+#: gnucash/report/reports/standard/advanced-portfolio.scm:1054
+msgid "Basis"
+msgstr "Base"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:441
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:899
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:911
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1029
+#, fuzzy
+#| msgid "Available"
+msgid "Not Available"
+msgstr "Disponible"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:485
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:506
+msgid "ReinvD"
+msgstr ""
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:488
+#: gnucash/report/reports/standard/balsheet-pnl.scm:1223
+#: gnucash/report/reports/standard/customer-summary.scm:110
+#: gnucash/report/reports/standard/customer-summary.scm:286
+#: gnucash/report/reports/standard/net-charts.scm:353
+#: gnucash/report/reports/standard/net-charts.scm:401
+#: libgnucash/engine/Account.cpp:158 libgnucash/engine/Account.cpp:4508
+#: libgnucash/engine/gncInvoice.c:1100
+msgid "Expense"
+msgstr "Gasto"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:495
+#: gnucash/report/reports/standard/balsheet-pnl.scm:1052
+#: libgnucash/engine/Account.cpp:4501
+msgid "Asset"
+msgstr "Activo"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:499
+#: gnucash/report/reports/standard/balsheet-pnl.scm:1055
+#: libgnucash/engine/Account.cpp:4503
+msgid "Liability"
+msgstr "Pasivo"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:505
+#, fuzzy
+#| msgid "Id"
+msgid "Ind"
+msgstr "Id"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:695
+msgid "Missing priceDB entry to convert"
+msgstr ""
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:699
+msgid ""
+" to MXN. Go to the Tools->Price Editor dialog to enter prices. Set to zero "
+"for this report"
+msgstr ""
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:703
+#, fuzzy
+#| msgid "Converted to: "
+msgid "(Converted "
+msgstr "Convertido en: "
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:717
+msgid "PriceDB lookup rate of"
+msgstr ""
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:719
+#, fuzzy
+#| msgid "Mark transaction split as unreconciled"
+msgid "transaction split rate of"
+msgstr "Marcar desglose de transacción como no conciliado"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:747
+msgid " "
+msgstr ""
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:796
+#, fuzzy
+#| msgid "Date required."
+msgid "Date Acquired"
+msgstr "Fecha requerida."
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:799
+#, fuzzy
+#| msgid "Date Posted"
+msgid "Date Sold"
+msgstr "Fecha Contabilizada"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:802
+#, fuzzy
+#| msgid "Splits Amount"
+msgid "Sales Amount"
+msgstr "Desgloses de Débito"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:992
+#, fuzzy
+#| msgid "Currency conversion date"
+msgid "Multiple currency conversion differences"
+msgstr "Fecha del conversión de monedas"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1078
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "Commodity: "
+msgid " (Account Commodity: "
+msgstr ""
+"\n"
+"Materia prima: "
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1085
+msgid "Name Source is Parent"
+msgstr ""
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1086
+msgid "Name Source is Current"
+msgstr ""
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1091
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:2427
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3127
+msgid "Item"
+msgstr ""
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1100
+#, fuzzy
+#| msgid "Print TXF export parameters"
+msgid "TXF Parameter: "
+msgstr "Escriba los parámetros de exportación TXF"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1103
+#, fuzzy
+#| msgid "Print TXF export parameters"
+msgid "TXF Parameter"
+msgstr "Escriba los parámetros de exportación TXF"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1105
+#, fuzzy
+#| msgid "Print TXF export parameters"
+msgid "TXF Parameters"
+msgstr "Escriba los parámetros de exportación TXF"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1186
+msgid "Balance on "
+msgstr "Balance al "
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1340
+#: gnucash/report/trep-engine.scm:1748
+msgid "Split Transaction"
+msgstr "Transacción Múltiple"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1588
+msgid "Account: "
+msgstr "Cuenta: "
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1595
+msgid "  In "
+msgstr " En "
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1610
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1617
+#, fuzzy
+#| msgid "Balance on "
+msgid "Balance on"
+msgstr "Balance al "
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1615
+#, fuzzy
+#| msgid "Total For "
+msgid " For "
+msgstr "Total para "
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1619
+#, fuzzy
+#| msgctxt "keep"
+#| msgid "For"
+msgid "For"
+msgstr "Para"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1776
+msgid "Set as tax-related, but assigned tax code no longer valid for tax year"
+msgstr ""
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1784
+#, fuzzy
+#| msgid "Not tax-related; invalid code %s for tax type %s"
+msgid "Set as tax-related, tax code assigned for different tax entity type"
+msgstr ""
+"Sin imposición relativa; código %s no válido para el tipo impositivo %s"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1794
+#, fuzzy
+#| msgid "Tax-related but has no tax code"
+msgid "Set as not tax-related, but tax code assigned"
+msgstr "Imposición relativa pero sin código impositivo"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1799
+#, fuzzy
+#| msgid "Not tax-related; invalid code %s for tax type %s"
+msgid "Set as not tax-related, tax code assigned for different tax entity type"
+msgstr ""
+"Sin imposición relativa; código %s no válido para el tipo impositivo %s"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1816
+#, fuzzy
+#| msgid "Tax-related but has no tax code"
+msgid "Set as tax-related, no tax code assigned"
+msgstr "Imposición relativa pero sin código impositivo"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:1958
+msgid "CURRENCY"
+msgstr ""
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:2165
+msgid "Form or Schedule / Line (TXF Code"
+msgstr "Formato o Plan / Línea (Código TXF"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:2167
+msgid "Parameters"
+msgstr "Parámetros"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:2424
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:2518
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3124
+msgid "Line (Code)"
+msgstr "Linea (Código)"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:2665
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3220
+#, fuzzy
+msgid " Line "
+msgstr " Línea "
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:2742
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:2752
+msgid "Line "
+msgstr "Línea "
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:2759
+#, fuzzy
+msgid "Payer Name Option "
+msgstr "Opciones del nombre del contribuyente"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:2772
+msgid "TXF Format "
+msgstr "Formato TXF"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:2778
+msgid "Multiple Copies "
+msgstr "Múltiples copias"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:2785
+msgid "Special Dates "
+msgstr "Fechas especiales "
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:2789
+msgid "Special Splits "
+msgstr "Separaciones especiales"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:2992
+#, scheme-format
+msgid "Tax Name: ~a<br/>"
+msgstr "Nombre del contribuyente: ~a<br/>"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:2994
+#, scheme-format
+msgid "Period from ~a to ~a<br/>"
+msgstr "Periodo del ~a al ~a<br/>"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:2995
+#, scheme-format
+msgid "Tax Year ~a<br/>"
+msgstr "Año fiscal: ~a<br/>"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:2996
+#, scheme-format
+msgid "Tax Entity Type: ~a<br/>"
+msgstr "Tipo de constribuyente: ~a<br/>"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:2997
+msgid "All amounts in MXN unless otherwise noted"
+msgstr "Todos los montos son en MXN a menos que se especifique otra cosa"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3004
+msgid "None specified"
+msgstr "Ninguno especificado"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3013
+msgid ""
+"<br/>The following Account(s) have errors with their Income Tax code "
+"assignments (use 'Edit->Tax Report Options' to correct):"
+msgstr ""
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3259
+msgid ""
+"The Income Tax Report is only available for valid Income Tax Entity Types. "
+"Go to the Edit->Tax Report Options dialog to change your Income Tax Entity "
+"Type selection and set up tax-related accounts."
+msgstr ""
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3260
+msgid ""
+"No Tax Related accounts were found with your account selection. Change your "
+"selection or go to the Edit->Tax Report Options dialog to set up tax-related "
+"accounts."
+msgstr ""
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3267
+msgid "Selected Report Options:<br/>"
+msgstr "Opciones de reporte seleccionadas</b>"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3289
+msgid "Subset of accounts"
+msgstr "Subconjunto de cuentas"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3290
+msgid "No accounts (none = all accounts)"
+msgstr "Sin cuentas (ninguna = todas)"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3292
+msgid "Suppress $0.00 valued Tax Codes"
+msgstr "Suprimir Cödigos Impositivos valuados en $0.00"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3293
+#, fuzzy
+#| msgid "Suppress $0.00 values"
+msgid "Do not suppress $0.00 valued Tax Codes"
+msgstr "Suprimir valores $0.00"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3295
+msgid "Display full account names"
+msgstr "Desplegar el nombre completo de la cuenta"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3296
+msgid "Do not display full account names"
+msgstr "No escribir los nombres completos de la cuenta"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3298
+msgid "Display all Transfer To/From Accounts"
+msgstr "Escribir todas las Cuentas de Origen/Destino de Transferencias"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3299
+msgid "Do not display all Transfer To/From Accounts"
+msgstr "No escribir todas las Cuentas de Origen/Destino de Transferencias"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3302
+msgid "Do not Print TXF export parameters"
+msgstr "No imprimir los parámetros de exportación TXF"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3304
+msgid "Do not display Action:Memo data"
+msgstr "No escribir datos de Operación:Memorandum"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3305
+msgid "Display Action:Memo data"
+msgstr "Escribir datos de Operación:Memorandum"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3307
+msgid "Display transactions for selected accounts"
+msgstr "Excluir transacciones de cuentas seleccionadas"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3308
+msgid "Do not display transactions for selected accounts"
+msgstr "No desplegar detalles de transacción para cuentas seleccionadas"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3310
+#, fuzzy
+#| msgid "Do not print transactions out of specified dates."
+msgid "Do not include transactions outside of selected dates"
+msgstr "No declarar transacciones externas de fechas especificadas."
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3311
+#, fuzzy
+#| msgid "Exclude transactions between selected accounts"
+msgid "Include some transactions outside of selected dates"
+msgstr "Excluir transacciones entre cuentas seleccionadas"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3314
+#, fuzzy
+#| msgid "Nearest to transaction date"
+msgid "PriceDB lookups nearest to transaction date"
+msgstr "El más cercano a la fecha de transacción"
+
+#: gnucash/report/reports/locale-specific/es_MX/taxtxf.scm:3315
+#, fuzzy
+#| msgid "Nearest to report date"
+msgid "PriceDB lookups nearest to report end date"
+msgstr "Más cercano para fecha del boletín"
 
 #: gnucash/report/reports/standard/account-piecharts.scm:36
 msgid "Income Piechart"
@@ -23779,10 +24321,6 @@ msgstr "Incluye cuentas que tengan un balance de acciones a cero."
 #: gnucash/report/reports/standard/portfolio.scm:246
 msgid "Listing"
 msgstr "Índices"
-
-#: gnucash/report/reports/standard/advanced-portfolio.scm:1054
-msgid "Basis"
-msgstr "Base"
 
 #: gnucash/report/reports/standard/advanced-portfolio.scm:1056
 #: gnucash/report/reports/standard/cashflow-barchart.scm:274
@@ -24378,16 +24916,6 @@ msgstr "Siempre"
 msgid "Total For "
 msgstr "Total para "
 
-#: gnucash/report/reports/standard/balsheet-pnl.scm:1052
-#: libgnucash/engine/Account.cpp:4501
-msgid "Asset"
-msgstr "Activo"
-
-#: gnucash/report/reports/standard/balsheet-pnl.scm:1055
-#: libgnucash/engine/Account.cpp:4503
-msgid "Liability"
-msgstr "Pasivo"
-
 #: gnucash/report/reports/standard/balsheet-pnl.scm:1073
 msgid "Liability and Equity"
 msgstr "Pasivo y Capital"
@@ -24404,16 +24932,6 @@ msgstr "Barra Árbol"
 #: gnucash/report/reports/standard/balsheet-pnl.scm:1164
 msgid " to "
 msgstr " para "
-
-#: gnucash/report/reports/standard/balsheet-pnl.scm:1223
-#: gnucash/report/reports/standard/customer-summary.scm:110
-#: gnucash/report/reports/standard/customer-summary.scm:286
-#: gnucash/report/reports/standard/net-charts.scm:353
-#: gnucash/report/reports/standard/net-charts.scm:401
-#: libgnucash/engine/Account.cpp:158 libgnucash/engine/Account.cpp:4508
-#: libgnucash/engine/gncInvoice.c:1100
-msgid "Expense"
-msgstr "Gasto"
 
 #: gnucash/report/reports/standard/balsheet-pnl.scm:1227
 #: gnucash/report/reports/standard/trial-balance.scm:823
@@ -25315,14 +25833,6 @@ msgstr "Incremento del capital"
 #: gnucash/report/reports/standard/equity-statement.scm:459
 msgid "Decrease in capital"
 msgstr "Decremento del capital"
-
-#: gnucash/report/reports/standard/general-journal.scm:94
-#: gnucash/report/reports/standard/general-ledger.scm:68
-#: gnucash/report/reports/standard/register.scm:134
-#: gnucash/report/reports/standard/register.scm:351
-#: gnucash/report/trep-engine.scm:915 gnucash/report/trep-engine.scm:2240
-msgid "Num/Action"
-msgstr "Núm/Operación"
 
 #: gnucash/report/reports/standard/general-journal.scm:102
 #: gnucash/report/reports/standard/general-ledger.scm:82
@@ -28761,10 +29271,6 @@ msgstr "Total acumulado"
 msgid "Balance b/f"
 msgstr "Balance a/p"
 
-#: gnucash/report/trep-engine.scm:1748
-msgid "Split Transaction"
-msgstr "Transacción Múltiple"
-
 #: gnucash/report/trep-engine.scm:2006
 msgid "CSV disabled for double column amounts"
 msgstr "CSV deshabilitado para cantidades de doble columna"
@@ -31779,6 +32285,10 @@ msgstr "Transacción compensado"
 msgid "Transaction Voided"
 msgstr "Transacción en blanco"
 
+#: libgnucash/tax/en_US/txf.scm:122 libgnucash/tax/es_MX/txf.scm:124
+msgid "No help available."
+msgstr "No hay ayuda disponible."
+
 #. Translators: This and the following strings appear on
 #. the account tab if the Tax Info column is displayed,
 #. i.e. if the user wants to record the tax form number
@@ -31788,69 +32298,123 @@ msgstr "Transacción en blanco"
 #. account generally corresponds to a specific line number
 #. on a paper form and each form has a unique
 #. identification (e.g., Form 1040, Schedule A).
-#: libgnucash/tax/gnc-locale-tax.c:93
+#: libgnucash/tax/gnc-locale-tax.c:97
 msgid "Tax-related but has no tax code"
 msgstr "Imposición relativa pero sin código impositivo"
 
-#: libgnucash/tax/gnc-locale-tax.c:107
+#: libgnucash/tax/gnc-locale-tax.c:111
 msgid "Tax entity type not specified"
 msgstr "Tipo no especificado de entidad impositiva"
 
-#: libgnucash/tax/gnc-locale-tax.c:161
+#: libgnucash/tax/gnc-locale-tax.c:165
 #, c-format
 msgid "Tax type %s: invalid code %s for account type"
 msgstr "Tipo impositivo %s: código %s no válido para el tipo de cuenta"
 
-#: libgnucash/tax/gnc-locale-tax.c:165
+#: libgnucash/tax/gnc-locale-tax.c:169
 #, c-format
 msgid "Not tax-related; tax type %s: invalid code %s for account type"
 msgstr ""
 "Sin imposición relativa; tipo impositivo %s: código %s no válido para el "
 "tipo de cuenta"
 
-#: libgnucash/tax/gnc-locale-tax.c:178
+#: libgnucash/tax/gnc-locale-tax.c:182
 #, c-format
 msgid "Invalid code %s for tax type %s"
 msgstr "Código %s no válido para el tipo impositivo %s"
 
-#: libgnucash/tax/gnc-locale-tax.c:182
+#: libgnucash/tax/gnc-locale-tax.c:186
 #, c-format
 msgid "Not tax-related; invalid code %s for tax type %s"
 msgstr ""
 "Sin imposición relativa; código %s no válido para el tipo impositivo %s"
 
-#: libgnucash/tax/gnc-locale-tax.c:200
+#: libgnucash/tax/gnc-locale-tax.c:204
 #, c-format
 msgid "No form: code %s, tax type %s"
 msgstr "Sin clase: código %s, tipo impositivo %s"
 
-#: libgnucash/tax/gnc-locale-tax.c:204
+#: libgnucash/tax/gnc-locale-tax.c:208
 #, c-format
 msgid "Not tax-related; no form: code %s, tax type %s"
 msgstr "Sin imposición relativa; ninguna forma: código %s, tipo impositivo %s"
 
-#: libgnucash/tax/gnc-locale-tax.c:221 libgnucash/tax/gnc-locale-tax.c:236
+#: libgnucash/tax/gnc-locale-tax.c:225 libgnucash/tax/gnc-locale-tax.c:240
 #, c-format
 msgid "No description: form %s, code %s, tax type %s"
 msgstr "Sin descripción: formulario %s, código %s, tipo impositivo %s"
 
-#: libgnucash/tax/gnc-locale-tax.c:225 libgnucash/tax/gnc-locale-tax.c:240
+#: libgnucash/tax/gnc-locale-tax.c:229 libgnucash/tax/gnc-locale-tax.c:244
 #, c-format
 msgid "Not tax-related; no description: form %s, code %s, tax type %s"
 msgstr ""
 "Sin imposición relativa; no hay ninguna descripción: clase: %s, código: %s, "
 "tipo impositivo: %s"
 
-#: libgnucash/tax/gnc-locale-tax.c:263
+#: libgnucash/tax/gnc-locale-tax.c:267
 #, c-format
 msgid "Not tax-related; %s%s: %s (code %s, tax type %s)"
 msgstr "Sin imposición relativa; %s%s %s (código %s, tipo impositivo %s)"
 
-#: libgnucash/tax/gnc-locale-tax.c:310
+#: libgnucash/tax/gnc-locale-tax.c:314
 #, c-format
 msgid "(Tax-related subaccounts: %d)"
 msgstr "(Subcuenta de Relación Impositiva: %d)"
 
-#: libgnucash/tax/us/txf.scm:122
-msgid "No help available."
-msgstr "No hay ayuda disponible."
+#, fuzzy
+#~| msgid "Print TXF export parameters"
+#~ msgid " (TXF Parameters: "
+#~ msgstr "Escriba los parámetros de exportación TXF"
+
+#, fuzzy
+#~| msgid "Number/Action"
+#~ msgid "Notes/Action:Memo"
+#~ msgstr "Número/Operación"
+
+#, fuzzy
+#~| msgid "Basis"
+#~ msgid "Cost/Basis"
+#~ msgstr "Base"
+
+#~ msgid "Line (Code): "
+#~ msgstr "Línea (Código): "
+
+#, fuzzy
+#~| msgid "2nd Est Tax Quarter (Apr 1 - May 31)"
+#~ msgid "2nd Est Tax Quarter"
+#~ msgstr "2º Trim. Impon. Est. (1 abr - 31 may)"
+
+#, fuzzy
+#~| msgid "3rd Est Tax Quarter (Jun 1 - Aug 31)"
+#~ msgid "3rd Est Tax Quarter"
+#~ msgstr "3º Trim. Impon. Est. (1 jun - 31 ago)"
+
+#, fuzzy
+#~| msgid "4th Est Tax Quarter (Sep 1 - Dec 31)"
+#~ msgid "4th Est Tax Quarter"
+#~ msgstr "4º Trim. Impon. Est. (1 sep - 31 dic)"
+
+#, fuzzy
+#~| msgid "Last Year"
+#~ msgid "Last Year."
+#~ msgstr "Último año"
+
+#, fuzzy
+#~| msgid "Last Yr 1st Est Tax Qtr (Jan 1 - Mar 31)"
+#~ msgid "Last Yr 1st Est Tax Qtr"
+#~ msgstr "Ult. año 1º Trim. Imp. Est (1 ene- 31 mar)"
+
+#, fuzzy
+#~| msgid "Last Yr 2nd Est Tax Qtr (Apr 1 - May 31)"
+#~ msgid "Last Yr 2nd Est Tax Qtr"
+#~ msgstr "Ult. año 2º Trim. Imp. Est (1 abr - 31 may)"
+
+#, fuzzy
+#~| msgid "Last Yr 3rd Est Tax Qtr (Jun 1 - Aug 31)"
+#~ msgid "Last Yr 3rd Est Tax Qtr"
+#~ msgstr "Ult. año 3º Trim. Imp. Est. (1 jun - 31 ago)"
+
+#, fuzzy
+#~| msgid "Last Yr 4th Est Tax Qtr (Sep 1 - Dec 31)"
+#~ msgid "Last Yr 4th Est Tax Qtr"
+#~ msgstr "Ult. año 4º Trim. Imp. Est (1 sep - 31 dic)"
