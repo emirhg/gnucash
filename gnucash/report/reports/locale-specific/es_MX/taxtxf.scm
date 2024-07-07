@@ -1076,7 +1076,7 @@
                       acct-full-name
                       (if (gnc-commodity-equiv account-commodity MXN-currency)
                           ""
-                          (string-append (N_ " (Account Commodity: ")
+                          (string-append " (" (N_ "Account Commodity") ": "
                                   (gnc-commodity-get-mnemonic account-commodity)
                                   ")"))
                       (if show-TXF-data?
@@ -1613,7 +1613,7 @@
                                                         (gnc:time64-previous-day
                                                          from-value)
                                                         "%Y-%b-%d")
-                                           (N_ " For ")
+                                           " " (N_ "For") " "
                                         )
                                         (string-append (N_ "Balance on") " "
                                            (gnc-print-time64 to-value "%Y-%b-%d")
@@ -2173,7 +2173,7 @@
               (account-cap-gain-sales-MXN-total (gnc-numeric-zero))
               (account-cap-gain-basis-MXN-total (gnc-numeric-zero))
               (form-line-acct-text (string-append
-                                         (N_ "Form or Schedule / Line (TXF Code")
+                                         (N_ "Form or Schedule") " / " (N_ "Line") " (" (N_ "TXF Code")
                                          (if show-TXF-data?
                                              (string-append ": " (N_ "Parameters"))
                                              "")
@@ -2673,7 +2673,7 @@
                                             form-sched-line-total-amount
                                             (string-append
                                                 prior-form-schedule
-                                                (N_ " Line ")
+                                                " " (N_ "Line") " "
                                                 prior-form-sched-line
                                             )
                                             #t
@@ -3180,7 +3180,7 @@
                                                            print-info))
                        )
                        (render-total-row table tax-code-total-amount
-                                              (string-append "Line (Code): "
+                                              (string-append "Line (Code)" ": "
                                                             saved-tax-code-text)
                                               #t
                                               transaction-details?
@@ -3228,7 +3228,7 @@
                            (render-total-row
                                 table
                                 form-sched-line-total-amount
-                                (string-append prior-form-schedule (G_ " Line ")
+                                (string-append prior-form-schedule " " (G_ "Line") " "
                                                prior-form-sched-line)
                                 #t
                                 transaction-details?
