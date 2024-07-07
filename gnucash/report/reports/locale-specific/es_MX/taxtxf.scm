@@ -179,8 +179,9 @@
    (gnc:make-multichoice-option
     gnc:pagename-general (N_ "Alternate Period")
     "c" (N_ "Override or modify From: & To:.")
-    (if after-tax-day 'from-to '1st-est)
+    (if after-tax-day 'from-to 'last-month)
     (list (vector 'from-to (N_ "Use From - To") (N_ "Use From - To period."))
+          (vector 'last-month (N_ "Last month") (N_ "Last month"))
           (vector '1st-est (N_ "1st Est Tax Quarter (Jan 1 - Mar 31)") (N_ "Jan 1 - Mar 31."))
           (vector '2nd-est (N_ "2nd Est Tax Quarter (Apr 1 - May 31)") (N_ "Apr 1 - May 31."))
           ;; Translators: The US tax quarters are different from
@@ -2033,6 +2034,11 @@
                                (set-tm:mon bdtm 6))
                               ((4th-est 4th-last) ; Oct 1
                                (set-tm:mon bdtm 9))))
+                        (if (eq? alt-period 'last-month)
+                        (let ((last-month-end (gnc-localtime (current-time))))
+                          (set-tm:mday last-month-end 1) ; Set to 1st of current month
+                          (set-tm:mon last-month-end (- (tm:mon last-month-end) 1)) ; Subtract 1 month
+                          (set! bdtm last-month-end)))
                         (set-tm:isdst bdtm -1)
                         (gnc-mktime bdtm))))
 
@@ -2079,6 +2085,11 @@
                              (set-tm:mon bdtm 11))
                             (else
                              (set! bdtm (gnc-localtime to-value)))))
+                      (if (eq? alt-period 'last-month)
+                        (let ((last-month-end (gnc-localtime (current-time))))
+                          (set-tm:mday last-month-end 1) ; Set to 1st of current month
+                          (set-tm:mday last-month-end (- (tm:mday last-month-end) 1)) ; Subtract 1 day
+                          (set! bdtm last-month-end)))
                       (set-tm:isdst bdtm -1)
                       (gnc-mktime bdtm))))
 
